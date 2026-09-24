@@ -1,0 +1,26 @@
+---
+title: "Tableau de bord"
+subtitle: "Un rapport Quarto alimenté par Node.js"
+---
+
+## Résumé
+
+Les indicateurs ci-dessous sont générés par le script Node.js, puis intégrés
+automatiquement dans cette page lors du rendu Quarto.
+
+{{< include data/metrics.md >}}
+
+## Pipeline
+
+```{.mermaid}
+flowchart LR
+    A[Node.js] -->|génère| B[data/metrics.md]
+    B -->|intègre| C[Quarto]
+    C --> D[site HTML]
+```
+
+Pour reconstruire le rapport après une modification des données :
+
+```bash
+npm run render
+```

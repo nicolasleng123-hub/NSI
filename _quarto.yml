@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Rapport Quarto + Node"
+  navbar:
+    background: "#17202a"
+    foreground: "white"
+    left:
+      - href: test.ipynb
+        text: Accueil
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    include-in-header:
+      - text: |
+          <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+          <script type="module" src="scripts/pyodide_init.js"></script>
