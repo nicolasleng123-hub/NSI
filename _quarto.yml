@@ -1,15 +1,36 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "Premiere/*/*.ipynb"
 
 website:
-  title: "Rapport Quarto + Node"
+  title: "NSI"
   navbar:
     background: "#17202a"
     foreground: "white"
     left:
-      - href: test.ipynb
-        text: Accueil
+      - text: "Première"
+        menu:
+          - text: "IHM"
+            href: Premiere/IHM/index.ipynb
+          - text: "Intro python"
+            href: Premiere/IntroPython/index.ipynb
+  
+  sidebar:
+    - title: "IHM"
+      contents:
+        - Premiere/IHM/index.ipynb
+    - title: "Intro python"
+      contents:
+        - Premiere/IntroPython/index.ipynb
+        - Premiere/IntroPython/variables.ipynb
+        - Premiere/IntroPython/condition.ipynb
+        - Premiere/IntroPython/boucleFor.ipynb
+        - Premiere/IntroPython/boucleWhile.ipynb
+        - Premiere/IntroPython/fonction.ipynb
+        
 
 format:
   html:

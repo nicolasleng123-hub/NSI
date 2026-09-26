@@ -4,8 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "data": "node scripts/generate-report.mjs",
-    "render": "npm run data && quarto render",
+    "render": "quarto render",
     "preview": "quarto preview"
   },
   "dependencies": {

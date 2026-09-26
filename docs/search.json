@@ -1,0 +1,50 @@
+[
+  {
+    "objectID": "Premiere/IntroPython/variables.html",
+    "href": "Premiere/IntroPython/variables.html",
+    "title": "Variables",
+    "section": "",
+    "text": "De la même manière que dans votre chambre chaque objet a (normalement) une place attitrée, un ordinateur (dont le rôle peut se résumer à «manipuler très vite des données») va assigner à chaque objet une place particulière dans son espace-mémoire. Et il lui assignera un nom (choisi par l’utilisateur) afin de pouvoir accéder à cette valeur.\nNous ne rentrerons pas dans le détail du processus d’allocation-mémoire, nous retiendrons juste ceci : pour manipuler un objet, il faut qu’il déjà qu’il ait un nom. C’est par cela que nous allons commencer :\n\n\n\n\n\n\nNotePremière variable\n\n\n\nConsidérons la phrase ‘nous allons stocker le prix du spectacle dans une variable a, qui vaudra au départ 32.’\n\n\nIl y a plusieurs commentaires à faire sur une telle annonce :\n\nDans le problème que l’on cherche à modéliser, le prix du spectacle est une donnée importante, qui va peut-être évoluer (ou pas !).\nPour la manipuler plus simplement, on va la désigner par un nom, le nom de la variable (ici, le nom a est particulièrement mal choisi, voir D. Bonnes pratiques de nommage)\nComme en mathématiques, le nom de cette variable va désigner une valeur qui peut changer (varier) au cours du temps (encore une fois : ou pas).\nCette valeur est fixée au départ à 32. On dira en informatique qu’elle est initialisée à 32.\nSi cette valeur ne change pas, on dira qu’elle est constante. Cela peut paraître inutile de donner un nom à quelque chose qui ne change pas, mais cela est très utile de définir les constantes au début d’un programme.\n\n\n\n\nLa phrase précédente donnera donc lieu à la ligne Python suivante :\na = 32\n\n\n\n\n\n\nWarningAttention\n\n\n\nLe symbole = ici utilisé n’a rien à voir avec le symbole = utilisé en mathématique. On dit qu’on a affecté à a la valeur 32, et il faut se représenter mentalement cette action par l’écriture a ← 32.\n\n\nUne fois la valeur 32 stockée dans la variable a, on peut alors utiliser cette variable :",
+    "crumbs": [
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tableau de bord",
+    "section": "",
+    "text": "Les indicateurs ci-dessous sont générés par le script Node.js, puis intégrés automatiquement dans cette page lors du rendu Quarto.\n\n\n\n\n\n\n\n\nIndicateur\nValeur\nÉvolution\n\n\n\n\nPages publiées\n12\n+3\n\n\nVisiteurs cette semaine\n248\n+18%\n\n\nTemps moyen de lecture\n4 min\n+12%"
+  },
+  {
+    "objectID": "index.html#résumé",
+    "href": "index.html#résumé",
+    "title": "Tableau de bord",
+    "section": "",
+    "text": "Les indicateurs ci-dessous sont générés par le script Node.js, puis intégrés automatiquement dans cette page lors du rendu Quarto.\n\n\n\n\n\n\n\n\nIndicateur\nValeur\nÉvolution\n\n\n\n\nPages publiées\n12\n+3\n\n\nVisiteurs cette semaine\n248\n+18%\n\n\nTemps moyen de lecture\n4 min\n+12%"
+  },
+  {
+    "objectID": "index.html#pipeline",
+    "href": "index.html#pipeline",
+    "title": "Tableau de bord",
+    "section": "Pipeline",
+    "text": "Pipeline\nflowchart LR\n    A[Node.js] --&gt;|génère| B[data/metrics.md]\n    B --&gt;|intègre| C[Quarto]\n    C --&gt; D[site HTML]\nPour reconstruire le rapport après une modification des données :\nnpm run render"
+  },
+  {
+    "objectID": "Premiere/IntroPython/index.html",
+    "href": "Premiere/IntroPython/index.html",
+    "title": "Intro Python",
+    "section": "",
+    "text": "This is a placeholder notebook created to fix JSON parse errors."
+  },
+  {
+    "objectID": "Premiere/IntroPython/variables.html#pourquoi-des-variables",
+    "href": "Premiere/IntroPython/variables.html#pourquoi-des-variables",
+    "title": "Variables",
+    "section": "",
+    "text": "De la même manière que dans votre chambre chaque objet a (normalement) une place attitrée, un ordinateur (dont le rôle peut se résumer à «manipuler très vite des données») va assigner à chaque objet une place particulière dans son espace-mémoire. Et il lui assignera un nom (choisi par l’utilisateur) afin de pouvoir accéder à cette valeur.\nNous ne rentrerons pas dans le détail du processus d’allocation-mémoire, nous retiendrons juste ceci : pour manipuler un objet, il faut qu’il déjà qu’il ait un nom. C’est par cela que nous allons commencer :\n\n\n\n\n\n\nNotePremière variable\n\n\n\nConsidérons la phrase ‘nous allons stocker le prix du spectacle dans une variable a, qui vaudra au départ 32.’\n\n\nIl y a plusieurs commentaires à faire sur une telle annonce :\n\nDans le problème que l’on cherche à modéliser, le prix du spectacle est une donnée importante, qui va peut-être évoluer (ou pas !).\nPour la manipuler plus simplement, on va la désigner par un nom, le nom de la variable (ici, le nom a est particulièrement mal choisi, voir D. Bonnes pratiques de nommage)\nComme en mathématiques, le nom de cette variable va désigner une valeur qui peut changer (varier) au cours du temps (encore une fois : ou pas).\nCette valeur est fixée au départ à 32. On dira en informatique qu’elle est initialisée à 32.\nSi cette valeur ne change pas, on dira qu’elle est constante. Cela peut paraître inutile de donner un nom à quelque chose qui ne change pas, mais cela est très utile de définir les constantes au début d’un programme.\n\n\n\n\nLa phrase précédente donnera donc lieu à la ligne Python suivante :\na = 32\n\n\n\n\n\n\nWarningAttention\n\n\n\nLe symbole = ici utilisé n’a rien à voir avec le symbole = utilisé en mathématique. On dit qu’on a affecté à a la valeur 32, et il faut se représenter mentalement cette action par l’écriture a ← 32.\n\n\nUne fois la valeur 32 stockée dans la variable a, on peut alors utiliser cette variable :",
+    "crumbs": [
+      "Variables"
+    ]
+  }
+]
