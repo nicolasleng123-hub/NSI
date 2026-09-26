@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -74,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script type="module" src="scripts/pyodide_init.js"></script>
+<script type="module" src="../../scripts/pyodide_init.js"></script>
 
 
 </head>
@@ -175,8 +210,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#les-énumérables" id="toc-les-énumérables" class="nav-link active" data-scroll-target="#les-énumérables">1. Les énumérables⚓︎</a>
+  <ul class="collapse">
+  <li><a href="#lindentation" id="toc-lindentation" class="nav-link" data-scroll-target="#lindentation">2.3 L’indentation⚓︎</a></li>
+  <li><a href="#itérer-sur-une-liste" id="toc-itérer-sur-une-liste" class="nav-link" data-scroll-target="#itérer-sur-une-liste">2.3 Itérer sur une liste</a></li>
+  </ul></li>
+  <li><a href="#comment-répéter-n-fois-la-même-action" id="toc-comment-répéter-n-fois-la-même-action" class="nav-link" data-scroll-target="#comment-répéter-n-fois-la-même-action">3. Comment répéter n fois la même action ?⚓︎</a></li>
+  <li><a href="#tout-sur-le-range." id="toc-tout-sur-le-range." class="nav-link" data-scroll-target="#tout-sur-le-range.">4. Tout sur le range.⚓︎</a>
+  <ul class="collapse">
+  <li><a href="#retour-sur-lexemple-précédent." id="toc-retour-sur-lexemple-précédent." class="nav-link" data-scroll-target="#retour-sur-lexemple-précédent.">4.1 Retour sur l’exemple précédent.</a></li>
+  <li><a href="#utilisation-minimale-de-lobjet-range" id="toc-utilisation-minimale-de-lobjet-range" class="nav-link" data-scroll-target="#utilisation-minimale-de-lobjet-range">4.2 Utilisation minimale de l’objet range()</a></li>
+  <li><a href="#utilisation-avancée-de-lobjet-range" id="toc-utilisation-avancée-de-lobjet-range" class="nav-link" data-scroll-target="#utilisation-avancée-de-lobjet-range">4.3 Utilisation avancée de l’objet range()</a></li>
+  </ul></li>
+  <li><a href="#une-situation-classique-la-double-boucle" id="toc-une-situation-classique-la-double-boucle" class="nav-link" data-scroll-target="#une-situation-classique-la-double-boucle">5. Une situation classique : la double boucle</a></li>
+  <li><a href="#pour-conclure" id="toc-pour-conclure" class="nav-link" data-scroll-target="#pour-conclure">Pour conclure</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -200,8 +254,279 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="les-énumérables" class="level2">
+<h2 class="anchored" data-anchor-id="les-énumérables">1. Les énumérables⚓︎</h2>
+<p>En mathématiques, on dit qu’un ensemble est dénombrable lorsqu’on peut associer à chaque élément de l’ensemble un nombre (traditionnellement 1, 2, 3 …)</p>
+<ul>
+<li><p>les fraises Tagada d’un paquet sont dénombrables.</p></li>
+<li><p>les voitures qui roulent sur l’autoroute sont dénombrables.</p></li>
+<li><p>l’eau qui coule d’un robinet n’est pas dénombrable. En informatique, il existe un concept similaire qui va désigner les objets que l’on peut énumérer, c’est-à-dire les décomposer en une succession ordonnée d’éléments. On les appelle les énumérables ou les itérables (Python utilise le mot anglais iterable).</p></li>
+<li><p>la variable “NSI” (qui est de type String) est énumérable : on peut la décomposer en N, S, I.</p></li>
+<li><p>la variable [4, 3, 17] (qui est de type List) est énumérable : on peut la décomposer en 4, 3, 17.</p></li>
+<li><p>la variable 5 (qui est de type Int) n’est PAS énumérable : on ne peut pas la décomposer. ## 2. Itérer sur les itérables : la boucle for … in …⚓︎ ### 2.1 Itérer sur une chaîne de caractères⚓︎ La principale caractéristique d’un ordinateur est d’exceller dans les opérations répétitives.</p></li>
+</ul>
+<p>(je vous laisse retrouver la citation de Gérard Berry, professeur au Collège de France, commençant par «L’ordinateur est…»)</p>
+<p>Il existe donc une instruction permettant de faire une (ou plusieurs) action(s) à chaque itération sur un élément énumérable.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exemple 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le programme suivant :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="st">'NSI'</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>va donner ceci :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>N</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>S</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>I</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Analyse grâce à PythonTutor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Étudions, grâce à PythonTutor, le détail de cette exécution.</p>
+<p>Cliquez sur Next et observez bien l’évolution de la variable k. <iframe width="100%" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20lettre%20in%20%22NSI%22%3A%0A%20%20%20%20print%28lettre%29&amp;mode=display&amp;py=311&amp;curInstr=0"> </iframe> La variable k prend donc successivement toutes les lettre de la chaîne de caractère “NSI”.</p>
+<p>Pour chaque valeur de k, la ou les instruction(s) situées de manière indentée sous la ligne du for seront exécutées.</p>
+</div>
+</div>
+<p>Ici, il y a simplement un print(k), donc chaque lettre de “NSI” s’affiche l’une après l’autre.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> m <span class="kw">in</span> <span class="st">'NASA'</span>:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"bonjour"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Dans cet exercice, la variable de boucle m est muette : elle n’apparaît dans les instructions indentées sous le for.</p>
+<p>La variable m prend successivement les valeurs ‘N, ’A’, ‘S’ et ‘A’, mais on ne la voit pas.</p>
+<section id="lindentation" class="level3">
+<h3 class="anchored" data-anchor-id="lindentation">2.3 L’indentation⚓︎</h3>
+<p>L’indentation est primordiale en Python : c’est elle qui indique les blocs de code. Dans d’autres langages, ils peuvent être délimités par des accolades { et }.</p>
+<p>Dans une boucle, tout ce qui sera indenté sous le for sera répété un certain nombre de fois. Puis le code continuera : on dit qu’on sera sorti de la boucle.</p>
+<p>Observez la différence entre l’exécution des codes suivants :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> m <span class="kw">in</span> <span class="st">'NASA'</span>:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"bonjour"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"au revoir"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>et</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> m <span class="kw">in</span> <span class="st">'NASA'</span>:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"bonjour"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"au revoir"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>et persuadez-vous de l’importance d’être vigilant sur l’indentation !</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Comment éviter les erreurs classiques
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quand vous écrivez une boucle for … in …, veillez bien à :</p>
+<ul>
+<li>finir la ligne du for par les deux points :</li>
+<li>indenter sous le for les instructions qui doivent être répétées. Si l’indentation ne s’est pas faite automatiquement après appui sur la touche Entrée, c’est que vous avez oublié les :.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="itérer-sur-une-liste" class="level3">
+<h3 class="anchored" data-anchor-id="itérer-sur-une-liste">2.3 Itérer sur une liste</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le programme suivant :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> jour <span class="kw">in</span> [<span class="st">"lundi"</span>, <span class="st">"mardi"</span>, <span class="st">"mercredi"</span>, <span class="st">"jeudi"</span>, <span class="st">"vendredi"</span>]:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"je vais au lycée le"</span>, jour)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>va donner ceci :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>je vais au lycée le lundi</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>je vais au lycée le mardi</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>je vais au lycée le mercredi</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>je vais au lycée le jeudi</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>je vais au lycée le vendredi</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Analyse grâce à PythonTutor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Étudions, grâce à PythonTutor, le détail de cette exécution.</p>
+<p>Cliquez sur Next et observez bien l’évolution de la variable k. <iframe width="100%" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20lettre%20in%20%22NSI%22%3A%0A%20%20%20%20print%28lettre%29&amp;mode=display&amp;py=311&amp;curInstr=0"> </iframe> La variable k prend donc successivement toutes les lettre de la chaîne de caractère “NSI”.</p>
+<p>Pour chaque valeur de k, la ou les instruction(s) situées de manière indentée sous la ligne du for seront exécutées.</p>
+</div>
+</div>
+<p>⚠ Attention: très souvent, l’objet énumérable que la boucle va parcourir aura été au préalable stocké dans une variable :</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le programme précédent est équivalent à :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>semaine <span class="op">=</span> [<span class="st">"lundi"</span>, <span class="st">"mardi"</span>, <span class="st">"mercredi"</span>, <span class="st">"jeudi"</span>, <span class="st">"vendredi"</span>]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> jour <span class="kw">in</span> semaine:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"je vais au lycée le"</span>, jour)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>Notez l’importance d’avoir choisi des noms de variables explicites : ils aident grandement à la lisibilité du code.</p>
+</section>
+</section>
+<section id="comment-répéter-n-fois-la-même-action" class="level2">
+<h2 class="anchored" data-anchor-id="comment-répéter-n-fois-la-même-action">3. Comment répéter n fois la même action ?⚓︎</h2>
+<p>Comment effectuer la même chose en Python ?</p>
+<p>Comment répéter 10 fois la phrase “We’re up all night to get lucky” ?</p>
+<p>Nous pourrions nous en sortir par</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="st">"blablablab"</span>: <span class="co">#n'importe quel mot de 10 caractères ferait l'affaire...</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"We're up all night to get lucky"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>mais il doit clairement y avoir mieux…</p>
+<p>Il y a mieux !</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>L’ensemble range
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le programme suivant :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"We're up all night to get lucky"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>va donner ceci :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>We<span class="st">'re up all night to get lucky</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="er">We're up all night to get lucky</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="er">We're up all night to get lucky</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="er">We're up all night to get lucky</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="er">We're up all night to get lucky</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="tout-sur-le-range." class="level2">
+<h2 class="anchored" data-anchor-id="tout-sur-le-range.">4. Tout sur le range.⚓︎</h2>
+<section id="retour-sur-lexemple-précédent." class="level3">
+<h3 class="anchored" data-anchor-id="retour-sur-lexemple-précédent.">4.1 Retour sur l’exemple précédent.</h3>
+<p>Si nous rendions la variable i moins muette ?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i, <span class="st">"We're up all night to get lucky"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>va donner ceci :</p>
+<pre><code>0 We're up all night to get lucky
+1 We're up all night to get lucky
+2 We're up all night to get lucky
+3 We're up all night to get lucky
+4 We're up all night to get lucky</code></pre>
+<p>i prend donc successivement toutes les valeurs entières entre 0 et 4. Il y en a bien 5.</p>
+</section>
+<section id="utilisation-minimale-de-lobjet-range" class="level3">
+<h3 class="anchored" data-anchor-id="utilisation-minimale-de-lobjet-range">4.2 Utilisation minimale de l’objet range()</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Syntaxe minimale de range()
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le programme suivant :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>va donner ceci :</p>
+<pre><code>1
+2
+3
+4</code></pre>
+<p>Interprétation : faire parcourir à une variable k l’ensemble range(n) va faire prendre à k les valeurs 0, 1, 2, …, n-1.</p>
+</div>
+</div>
+</section>
+<section id="utilisation-avancée-de-lobjet-range" class="level3">
+<h3 class="anchored" data-anchor-id="utilisation-avancée-de-lobjet-range">4.3 Utilisation avancée de l’objet range()</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Syntaxe complète de range()
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le programme suivant :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">2</span>):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>va donner ceci :</p>
+<pre><code>5
+7
+9
+11
+13</code></pre>
+<p>Interprétation : faire parcourir à k l’ensemble range(start, stop, step) fait : * démarrer k à la valeur start , * progresser k de step en step tant que k est strictement inférieur à stop .</p>
+</div>
+</div>
+<p>Remarques : * si le start est omis, il vaut 0 par défaut. * si le step est omis, il vaut 1 par défaut.</p>
+</section>
+</section>
+<section id="une-situation-classique-la-double-boucle" class="level2">
+<h2 class="anchored" data-anchor-id="une-situation-classique-la-double-boucle">5. Une situation classique : la double boucle</h2>
+<p>Il est très souvent utile d’imbriquer une boucle dans une autre, notamment lors du parcours de tous les pixels d’une image. Prenons pour l’instant un exemple numérique.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">5</span>):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> b <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>):</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> a <span class="op">*</span> b</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, <span class="st">'*'</span>, b, <span class="st">'='</span>, p)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>va donner ceci :</p>
+<pre><code>1 * 1 = 1
+1 * 2 = 2
+1 * 3 = 3
+2 * 1 = 2
+2 * 2 = 4
+2 * 3 = 6
+3 * 1 = 3
+3 * 2 = 6
+3 * 3 = 9
+4 * 1 = 4
+4 * 2 = 8
+4 * 3 = 12</code></pre>
+</section>
+<section id="pour-conclure" class="level2">
+<h2 class="anchored" data-anchor-id="pour-conclure">Pour conclure</h2>
+<ul>
+<li><p>La boucle for … in … s’utilise lorsque :</p>
+<ul>
+<li>on veut parcourir un à un les éléments d’un objet itérable (une chaîne de caractère, une liste, un tuple, un dictionnaire…)</li>
+<li>on veut répéter une action un nombre de fois connu à l’avance. On parle de boucle bornée.</li>
+</ul></li>
+<li><p>Les instructions répétées peuvent - mais ce n’est pas obligatoire - faire appel à la variable de boucle, mais il ne faut pas que ces instructions la modifient.</p></li>
+<li><p>Ne pas oublier les : et l’indentation ! range(n) génère une séquence de n nombres entiers: on s’en servira dès qu’on aura besoin de répéter n fois des instructions.</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

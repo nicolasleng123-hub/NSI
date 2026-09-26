@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Variables – NSI</title>
+<title>Fiche – NSI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Premiere/IntroPython/variables.html">Variables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Premiere/IntroPython/fiche.html">Fiche</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -177,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Premiere/IntroPython/variables.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../Premiere/IntroPython/variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variables</span></a>
   </div>
 </li>
@@ -205,6 +205,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Fonction</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Premiere/IntroPython/fiche.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Fiche</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -215,20 +221,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pourquoi-des-variables" id="toc-pourquoi-des-variables" class="nav-link active" data-scroll-target="#pourquoi-des-variables">Pourquoi des variables ?</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#on-code" id="toc-on-code" class="nav-link" data-scroll-target="#on-code">On code !</a></li>
-  </ul></li>
-  <li><a href="#b.-le-fonctionnement-interne" id="toc-b.-le-fonctionnement-interne" class="nav-link" data-scroll-target="#b.-le-fonctionnement-interne">B. Le fonctionnement interne</a>
-  <ul class="collapse">
-  <li><a href="#b.1-explication-simplifiée" id="toc-b.1-explication-simplifiée" class="nav-link" data-scroll-target="#b.1-explication-simplifiée">B.1 Explication simplifiée</a></li>
-  <li><a href="#b.2-une-histoire-en-2-temps-évaluation-affectation" id="toc-b.2-une-histoire-en-2-temps-évaluation-affectation" class="nav-link" data-scroll-target="#b.2-une-histoire-en-2-temps-évaluation-affectation">B.2 Une histoire en 2 temps : évaluation, affectation</a></li>
-  </ul></li>
-  <li><a href="#c.-différents-types-de-variables" id="toc-c.-différents-types-de-variables" class="nav-link" data-scroll-target="#c.-différents-types-de-variables">C. Différents types de variables</a>
-  <ul class="collapse">
-  <li><a href="#c.1-python-et-le-typage-dynamique" id="toc-c.1-python-et-le-typage-dynamique" class="nav-link" data-scroll-target="#c.1-python-et-le-typage-dynamique">C.1 Python et le typage dynamique⚓︎</a></li>
-  </ul></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link active" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#condition" id="toc-condition" class="nav-link" data-scroll-target="#condition">Condition</a></li>
   </ul>
 </nav>
     </div>
@@ -237,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Variables</h1>
+<h1 class="title">Fiche</h1>
 </div>
 
 
@@ -254,152 +248,84 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="pourquoi-des-variables" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-des-variables">Pourquoi des variables ?</h2>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>De la même manière que dans votre chambre chaque objet a (normalement) une place attitrée, un ordinateur (dont le rôle peut se résumer à «manipuler très vite des données») va assigner à chaque objet une place particulière dans son espace-mémoire. Et il lui assignera un nom (choisi par l’utilisateur) afin de pouvoir accéder à cette valeur.</p>
-<p>Nous ne rentrerons pas dans le détail du processus d’allocation-mémoire, nous retiendrons juste ceci : pour manipuler un objet, il faut qu’il déjà qu’il ait un nom. C’est par cela que nous allons commencer :</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Première variable
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Considérons la phrase ‘nous allons stocker le prix du spectacle dans une variable a, qui vaudra au départ 32.’</p>
-</div>
-</div>
-<p>Il y a plusieurs commentaires à faire sur une telle annonce :</p>
-<ul>
-<li>Dans le problème que l’on cherche à modéliser, le prix du spectacle est une donnée importante, qui va peut-être évoluer (ou pas !).</li>
-<li>Pour la manipuler plus simplement, on va la désigner par un nom, le nom de la variable (ici, le nom a est particulièrement mal choisi, voir D. Bonnes pratiques de nommage)</li>
-<li>Comme en mathématiques, le nom de cette variable va désigner une valeur qui peut changer (varier) au cours du temps (encore une fois : ou pas).</li>
-<li>Cette valeur est fixée au départ à 32. On dira en informatique qu’elle est initialisée à 32.</li>
-<li>Si cette valeur ne change pas, on dira qu’elle est constante. Cela peut paraître inutile de donner un nom à quelque chose qui ne change pas, mais cela est très utile de définir les constantes au début d’un programme.</li>
-</ul>
-</section>
-<section id="on-code" class="level3">
-<h3 class="anchored" data-anchor-id="on-code">On code !</h3>
-<p>La phrase précédente donnera donc lieu à la ligne Python suivante :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">32</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Attention
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Le symbole = ici utilisé n’a rien à voir avec le symbole = utilisé en mathématique. On dit qu’on a affecté à a la valeur 32, et il faut se représenter mentalement cette action par l’écriture a ← 32.</p>
-</div>
-</div>
-<p>Une fois la valeur 32 stockée dans la variable a, on peut alors utiliser cette variable :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> a<span class="op">+</span><span class="dv">3</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Remarquez bien l’erreur lorsqu’on a fait appel à une variable b qui n’avait jamais été définie, comme le dit explicitement le message NameError: name ‘b’ is not defined</p>
-</section>
-</section>
-<section id="b.-le-fonctionnement-interne" class="level2">
-<h2 class="anchored" data-anchor-id="b.-le-fonctionnement-interne">B. Le fonctionnement interne</h2>
-<section id="b.1-explication-simplifiée" class="level3">
-<h3 class="anchored" data-anchor-id="b.1-explication-simplifiée">B.1 Explication simplifiée</h3>
-<p>Il est possible d’expliquer le fonctionnement interne de l’affectation des variables par la métaphore des tiroirs :</p>
-<p>Écrire l’instruction :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>va provoquer chez l’ordinateur le comportement suivant :</p>
-<ul>
-<li>Est-ce que je possède déjà un tiroir appelé a ?</li>
-<li>si oui, je me positionne devant.</li>
-<li>si non, je crée un tiroir appelé a.</li>
-</ul>
-<p>J’ouvre le tiroir et j’y dépose la valeur numérique 2. Si le tiroir contenait déjà une valeur, celle-ci disparaît (on dit qu’elle est écrasée).</p>
-</section>
-<section id="b.2-une-histoire-en-2-temps-évaluation-affectation" class="level3">
-<h3 class="anchored" data-anchor-id="b.2-une-histoire-en-2-temps-évaluation-affectation">B.2 Une histoire en 2 temps : évaluation, affectation</h3>
-<p>Observons l’instruction</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="b.2.1-étape-1-lévaluation" class="level4">
-<h4 class="anchored" data-anchor-id="b.2.1-étape-1-lévaluation">B.2.1 Étape 1 : l’évaluation</h4>
-<p>Python va prendre la partie à droite du signe égal et va l’évaluer, ce qui signifie qu’il va essayer de lui donner une valeur. Dans nos exemples, cette valeur sera numérique, mais elle peut être d’un autre type (voir plus loin)</p>
-<p>Ici, Python effectue le calcul 2 + 3 et l’évalue à la valeur 5.</p>
-</section>
-<section id="b.2.2-étape-2-laffectation" class="level4">
-<h4 class="anchored" data-anchor-id="b.2.2-étape-2-laffectation">B.2.2 Étape 2 : l’affectation</h4>
-<p>Une fois évaluée l’expression à droite du signe =, il ne reste plus qu’à l’affecter à la variable (déjà existante ou pas) située à gauche du signe =.</p>
-<p>Comme expliqué précédemment, un «lien» est fait entre le nom de la variable et l’adresse-mémoire qui contient la valeur évaluée. a sera donc lié à la valeur 5. Plus simplement, on dira que «a vaut 5»</p>
-</section>
-<section id="b.2.2-lincrémentation-dune-variable." class="level4">
-<h4 class="anchored" data-anchor-id="b.2.2-lincrémentation-dune-variable.">B.2.2 L’incrémentation d’une variable.</h4>
-<p>«Incrémenter» une variable signifie l’augmenter.</p>
-<p>Imaginons une variable appelée compteur. Au démarrage de notre programme, elle est initialisée à la valeur 0.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>compteur <span class="op">=</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Considérons qu’à un moment du programme, cette variable doit être modifiée, par exemple en lui ajoutant 1.</p>
-<p>En Python, cela s’écrira :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>compteur <span class="op">=</span> compteur <span class="op">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>On évalue la partie droite de l’égalité, donc l’expression compteur + 1.</li>
-<li>On va donc chercher le contenu de la variable compteur. Si celle-ci n’existe pas, un message d’erreur est renvoyé.</li>
-<li>On additionne 1 au contenu de la variable compteur.</li>
-<li>On écrase le contenu actuel de la variable compteur avec la valeur obtenue au 3.</li>
-</ul>
-<p>À la fin de ces opérations, la variable compteur a bien augmenté de 1.</p>
-<p>Cette procédure d’incrémentation est très très classique, il faut la maîtriser parfaitement !</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>il existe aussi une syntaxe particulière, un peu plus courte : compteur += 1</p>
-</div>
-</div>
-</section>
-<section id="b.3.3-léchange-de-variables" class="level4">
-<h4 class="anchored" data-anchor-id="b.3.3-léchange-de-variables">B.3.3 L’échange de variables</h4>
-<p>Après l’incrémentation, une autre technique de base reviendra fréquemment dans nos codes : l’échange de variables.</p>
-<p>Imaginons les variables suivantes :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Le but est d’échanger les valeurs de a et de b. Méthode naïve :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> b</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Que valent a et b maintenant ?</p>
-<p>Malheureusment : &gt;&gt;&gt; a 5 &gt;&gt;&gt; b 5</p>
-<p>La variable a a été écrasée dès qu’on lui a donné la valeur de la variable b.</p>
-<p>Comment la préserver ?</p>
-<p>La situation est similaire au problème suivant : comment échanger le contenu de ces deux verres ?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="attachment:/public/verres.png" class="img-fluid figure-img"></p>
-<figcaption>verres</figcaption>
-</figure>
-</div>
-<p>La méthode est évidente : il nous faut un troisième verre.</p>
-<p>Nous allons faire de même pour nos variables. Nous allons utiliser une variable temporaire (on parle aussi de variable tampon) pour conserver la mémoire de la valeur de a (par exemple) avant que celle-ci ne se fasse écraser :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> a </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> b</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> temp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-</section>
-<section id="c.-différents-types-de-variables" class="level2">
-<h2 class="anchored" data-anchor-id="c.-différents-types-de-variables">C. Différents types de variables</h2>
-<p>Pour l’instant, les variables que nous avons manipulées contiennent toutes des nombres entiers.</p>
-<p>Sauf les maisons de Poudlard, qui sont des mots chaînes de caractères.</p>
-<p>Pour différencier la nature de ce que peut contenir une variable, on parle alors de type de variable.</p>
-<p>En voici quelques uns, que nous découvrirons au fil de l’année :</p>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
+<p>declaration :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>évaluation, affectation :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> a<span class="op">*</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Variable ciblée : a</p>
+<p>Expression : a*4</p>
+<p>lexpression sera toujour executée en premier et sont tres simmilaire au expression matematique et le parenthesage existe</p>
+<p>Liste des operateur</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Instr.</th>
+<th>Utilité</th>
+<th>Instr.</th>
+<th>Utilité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>Addition</td>
+<td>//</td>
+<td>division euclidienne</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>Soustraction</td>
+<td>%</td>
+<td>reste division euclidienne</td>
+</tr>
+<tr class="odd">
+<td>*</td>
+<td>Multiplication</td>
+<td>**</td>
+<td>exposant</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>Divisiion</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Liste des comparaiseon</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Instr.</th>
+<th>Utilité</th>
+<th>Instr.</th>
+<th>Utilité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&gt;</td>
+<td>inferieur</td>
+<td>&gt;=</td>
+<td>inferieur ou egal</td>
+</tr>
+<tr class="even">
+<td>&lt;</td>
+<td>supperieur</td>
+<td>&lt;=</td>
+<td>superieur ou egal</td>
+</tr>
+<tr class="odd">
+<td>==</td>
+<td>equivalent</td>
+<td>!=</td>
+<td>differant</td>
+</tr>
+</tbody>
+</table>
+<p>type variable</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -456,31 +382,15 @@ Note
 </tr>
 </tbody>
 </table>
-<p>Comment connaître le type d’une variable ? Il suffit dans la console d’utiliser la fonction type.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(a)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>&lt;class ‘int’&gt;</p>
-<section id="c.1-python-et-le-typage-dynamique" class="level3">
-<h3 class="anchored" data-anchor-id="c.1-python-et-le-typage-dynamique">C.1 Python et le typage dynamique⚓︎</h3>
-<p>Jusqu’à présent, nous ne nous sommes pas occupés de préciser à Python le type de notre variable.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(a)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Mais dans certains langages, c’est obligatoire. En C par exemple, il faut écrire :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Cela signifie (pour le langage C) que notre variable a n’aura pas le droit de contenir autre chose qu’un nombre entier. Si on écrit ensuite</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">"test"</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Le compilateur C renverra une erreur : on ne peut pas stocker une chaîne de caractères dans une variable qu’on a créée comme étant de type entier.</p>
-<p>Et en Python ?</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(a)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'int'</span><span class="op">&gt;</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">"test"</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(a)</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'str'</span><span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Python a changé tout seul le type de notre variable, sans intervention. On parle de typage dynamique.</p>
-
-
+<p>Echange de variable grace a une variable temporaire</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> a </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> b</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> temp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+<section id="condition" class="level2">
+<h2 class="anchored" data-anchor-id="condition">Condition</h2>
+
+
 </section>
 
 </main> <!-- /main -->

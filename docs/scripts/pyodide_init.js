@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         wrapper.className = "python-cell-wrapper";
         
         let editorView = new EditorView({
-        doc: "print('Hello')",
+        doc: cell.textContent,
         extensions: [
             tabKeymap,
             basicSetup,
