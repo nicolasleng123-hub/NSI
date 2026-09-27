@@ -31,6 +31,7 @@ website:
         - Premiere/IntroPython/boucleWhile.ipynb
         - Premiere/IntroPython/fonction.ipynb
         - Premiere/IntroPython/fiche.ipynb
+        - Premiere/IntroPython/controleBlanc.ipynb
         
 
 format:

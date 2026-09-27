@@ -36,18 +36,24 @@ document.addEventListener("DOMContentLoaded", function () {
     cells.forEach(cell => {
         let wrapper = document.createElement("div");
         wrapper.className = "python-cell-wrapper";
-        
+
+        // Récupérer le texte visible avec retours à la ligne et vider la cellule
+        const source = (cell.innerText || "").replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+        cell.innerHTML = "";
+
         let editorView = new EditorView({
-        doc: cell.textContent,
-        extensions: [
-            tabKeymap,
-            basicSetup,
-            python()
-        ],
-        parent: wrapper
+            doc: source,
+            extensions: [tabKeymap, basicSetup, python()],
+            parent: wrapper
         });
-        
-        
+
+        // Output element (une par bloc)
+        let output = document.createElement("pre");
+        output.className = "python-output";
+        output.hidden = true;
+        wrapper.appendChild(output);
+
+        // Bouton d'exécution
         let button = document.createElement("button");
         button.type = "button";
         button.className = "python-run-button";
@@ -59,23 +65,32 @@ document.addEventListener("DOMContentLoaded", function () {
             button.textContent = "Chargement de Python...";
             output.hidden = false;
             output.textContent = "";
-
             try {
                 let pyodide = await getPyodide();
-                let capturedOutput = "";
+
                 pyodide.setStdout({
-                batched: function (text) {
-                    capturedOutput += text + "\n";
-                }
+                    batched: (text) => {
+                        output.textContent += text+"\n";
+                        output.scrollTop = output.scrollHeight;
+                    }
                 });
+                pyodide.setStderr({
+                    batched: (text) => {
+                        output.textContent += text+"\n";
+                        output.scrollTop = output.scrollHeight;
+                    }
+                });
+
                 let result = await pyodide.runPythonAsync(editorView.state.doc.toString());
-                let resultText = result === undefined ? "" : String(result);
-                output.textContent = capturedOutput + resultText;
+                if (result !== undefined && result !== null) {
+                    output.textContent += String(result);
+                    output.scrollTop = output.scrollHeight;
+                }
                 if (result && typeof result.destroy === "function") {
-                result.destroy();
+                    result.destroy();
                 }
             } catch (error) {
-                output.textContent = String(error);
+                output.textContent += String(error);
             } finally {
                 button.disabled = false;
                 button.textContent = "Executer";
@@ -96,14 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
             resetButton.disabled = false;
         });
 
-        let output = document.createElement("pre");
-        output.className = "python-output";
-        output.hidden = true;
-        wrapper.appendChild(output);
-
-
         cell.appendChild(wrapper);
-
-
     });
 });

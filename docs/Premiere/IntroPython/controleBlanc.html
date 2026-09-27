@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Fiche – NSI</title>
+<title>Controle – NSI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Premiere/IntroPython/fiche.html">Fiche</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Premiere/IntroPython/controleBlanc.html">Controle</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -207,13 +207,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Premiere/IntroPython/fiche.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../Premiere/IntroPython/fiche.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fiche</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Premiere/IntroPython/controleBlanc.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Premiere/IntroPython/controleBlanc.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Controle</span></a>
   </div>
 </li>
@@ -227,14 +227,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#variables" id="toc-variables" class="nav-link active" data-scroll-target="#variables">Variables</a></li>
-  <li><a href="#condition" id="toc-condition" class="nav-link" data-scroll-target="#condition">Condition</a></li>
-  <li><a href="#les-boucles-for" id="toc-les-boucles-for" class="nav-link" data-scroll-target="#les-boucles-for">Les boucles <code>for</code></a>
-  <ul class="collapse">
-  <li><a href="#la-fonction-range" id="toc-la-fonction-range" class="nav-link" data-scroll-target="#la-fonction-range">La fonction <code>range</code></a></li>
-  </ul></li>
-  <li><a href="#la-boucle-while" id="toc-la-boucle-while" class="nav-link" data-scroll-target="#la-boucle-while">La boucle <code>while</code></a></li>
-  <li><a href="#fonction" id="toc-fonction" class="nav-link" data-scroll-target="#fonction">Fonction</a></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1">Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2">Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3">Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4">Exercice 4</a></li>
+  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5">Exercice 5</a></li>
+  <li><a href="#exercice-5-1" id="toc-exercice-5-1" class="nav-link" data-scroll-target="#exercice-5-1">Exercice 5</a></li>
   </ul>
 </nav>
     </div>
@@ -243,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fiche</h1>
+<h1 class="title">Controle</h1>
 </div>
 
 
@@ -260,279 +258,238 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="variables" class="level2">
-<h2 class="anchored" data-anchor-id="variables">Variables</h2>
-<p>declaration :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>évaluation, affectation :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> a<span class="op">*</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Variable ciblée : a</p>
-<p>Expression : a*4</p>
-<p>L’expression sera toujours évaluée en premier ; elle est très similaire aux expressions mathématiques et on peut utiliser des parenthèses pour préciser l’ordre des opérations.</p>
-<p>Liste des opérateurs</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Instr.</th>
-<th>Utilité</th>
-<th>Instr.</th>
-<th>Utilité</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>+</td>
-<td>Addition</td>
-<td>//</td>
-<td>Division euclidienne</td>
-</tr>
-<tr class="even">
-<td>-</td>
-<td>Soustraction</td>
-<td>%</td>
-<td>Reste de la division euclidienne</td>
-</tr>
-<tr class="odd">
-<td>*</td>
-<td>Multiplication</td>
-<td>**</td>
-<td>Puissance</td>
-</tr>
-<tr class="even">
-<td>/</td>
-<td>Division</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Types de variables</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 40%">
-<col style="width: 27%">
-<col style="width: 31%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Type Python</th>
-<th style="text-align: left;">Traduction</th>
-<th style="text-align: right;">Exemple</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>int</td>
-<td style="text-align: left;">entier</td>
-<td style="text-align: right;">42</td>
-</tr>
-<tr class="even">
-<td>float</td>
-<td style="text-align: left;">flottant (décimal)</td>
-<td style="text-align: right;">3.1416</td>
-</tr>
-<tr class="odd">
-<td>str</td>
-<td style="text-align: left;">chaîne de caractères</td>
-<td style="text-align: right;">“NSI”</td>
-</tr>
-<tr class="even">
-<td>bool</td>
-<td style="text-align: left;">booléen (True ou False)</td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td>tuple</td>
-<td style="text-align: left;">couple (tuple)</td>
-<td style="text-align: right;">(255, 127, 0)</td>
-</tr>
-<tr class="even">
-<td>list</td>
-<td style="text-align: left;">liste</td>
-<td style="text-align: right;">[0, 1, 2, 3, 4, 5]</td>
-</tr>
-<tr class="odd">
-<td>dict</td>
-<td style="text-align: left;">dictionnaire</td>
-<td style="text-align: right;">{‘Homer’: 43, ‘Marge’: 41, ‘Bart’: 12, ‘Lisa’: 10, ‘Maggie’: 4}</td>
-</tr>
-<tr class="even">
-<td>function</td>
-<td style="text-align: left;">fonction</td>
-<td style="text-align: right;">print</td>
-</tr>
-</tbody>
-</table>
-<p>Échange de variables avec une variable temporaire</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> a</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> b</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> temp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Concaténation de caractères
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Il est possible de coller (le vrai mot est concaténer) deux chaînes de caractères par l’opérateur + :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"a"</span> <span class="op">+</span> <span class="st">"b"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">'ab'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<section id="exercice-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-1">Exercice 1</h3>
+<p>Sur un jeu d’échecs, les cases sont repérées par une lettre (de A jusqu’à H) et par un chiffre (de 1 jusqu’à 8).</p>
+<p>Les cases sont donc A1, A2, A3, …, H7, H8.</p>
+<p>Proposer un code qui écrit toutes les cases possibles.</p>
+<div id="editor">
+
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Correction
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lettre <span class="kw">in</span> <span class="st">'ABCDEFGH'</span>:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> chiffre <span class="kw">in</span> <span class="st">'12345678'</span>:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        case <span class="op">=</span> lettre <span class="op">+</span> chiffre</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(case)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 </section>
-<section id="condition" class="level2">
-<h2 class="anchored" data-anchor-id="condition">Condition</h2>
-<p>Une condition est une expression qui se termine par True (vrai) ou False (faux).</p>
-<p>Liste des comparaisons</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Instr.</th>
-<th>Utilité</th>
-<th>Instr.</th>
-<th>Utilité</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>&gt;</td>
-<td>supérieur</td>
-<td>&gt;=</td>
-<td>supérieur ou égal</td>
-</tr>
-<tr class="even">
-<td>&lt;</td>
-<td>inférieur</td>
-<td>&lt;=</td>
-<td>inférieur ou égal</td>
-</tr>
-<tr class="odd">
-<td>==</td>
-<td>égalité</td>
-<td>!=</td>
-<td>différent</td>
-</tr>
-</tbody>
-</table>
-<p>Il existe aussi des opérateurs logiques qui s’appliquent sur des valeurs vraies ou fausses :</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Instr.</th>
-<th>Utilité</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>and</td>
-<td>vrai si les deux opérandes sont vrais</td>
-</tr>
-<tr class="even">
-<td>or</td>
-<td>vrai si au moins un des opérandes est vrai</td>
-</tr>
-</tbody>
-</table>
-<p>L’instruction conditionnelle <code>if</code> permet d’exécuter du code seulement si une condition est vraie.</p>
-<p>Syntaxe :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condition:</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    instruction1</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    instruction2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>On peut ajouter un <code>else</code> qui s’exécute lorsque la condition est fausse :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condition:</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    instruction1</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    instruction2</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    instruction3</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    instruction4</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Pour tester plusieurs conditions successives on utilise <code>elif</code> (contraction de else + if) :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condition:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    instruction1</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    instruction2</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> condition2:</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    instruction3</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> condition3:</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    instruction4</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    instruction5</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="les-boucles-for" class="level2">
-<h2 class="anchored" data-anchor-id="les-boucles-for">Les boucles <code>for</code></h2>
-<p>Les boucles <code>for</code> permettent de parcourir un itérable (chaîne, liste, tuple, etc.).</p>
-<p>Exemples :</p>
+<section id="exercice-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-2">Exercice 2</h3>
 <ul>
-<li>La chaîne “NSI” est itérable : on peut la décomposer en ‘N’, ‘S’, ‘I’.</li>
-<li>La liste [4, 3, 17] est itérable : on peut la décomposer en 4, 3, 17.</li>
-<li>L’entier 5 n’est pas itérable.</li>
+<li><ol type="1">
+<li>Vous disposez d’une liste de nombres [2, 5, 7, 10, 13, 18].</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Écrivez un programme en Python qui calcule la somme de tous les nombres pairs de la liste à l’aide d’une boucle for.</li>
+</ol></li>
+<li><ol start="3" type="1">
+<li>Affichez ensuite cette somme à l’écran.</li>
+</ol></li>
 </ul>
-<p>Syntaxe :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> elm <span class="kw">in</span> iterable:</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    instruction1</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    instruction2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Exemple :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lettre <span class="kw">in</span> <span class="st">"NSI"</span>:</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(lettre)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>La première itération affichera ‘N’,puis à la deuxième ‘S’, puis ‘I’.</p>
-<section id="la-fonction-range" class="level3">
-<h3 class="anchored" data-anchor-id="la-fonction-range">La fonction <code>range</code></h3>
-<p><code>range</code> renvoie un itérable de nombres selon les paramètres donnés :</p>
-<p>Syntaxe :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">range</span>(debut, fin, pas)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>La séquence commence à <code>debut</code>, avance de <code>pas</code> et s’arrête avant <code>fin</code> (fin exclue). <code>pas</code> vaut 1 par défaut et <code>debut</code> vaut 0 par défaut.</p>
-<p>Note : si la variable d’itération n’est pas utilisée, il est recommandé de la nommer <code>_</code> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"bonjour"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="editor">
+
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Correction
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>liste_nombres <span class="op">=</span> [<span class="dv">2</span> , <span class="dv">5</span> , <span class="dv">7</span> , <span class="dv">10</span> , <span class="dv">13</span> , <span class="dv">18</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>somme_nombres_pairs <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> nombre <span class="kw">in</span> liste_nombres :</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> nombre <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>: <span class="co"># On vérifie si le nombre est pair</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        somme_nombres_pairs <span class="op">+=</span> nombre <span class="co"># On ajoute le nombre à la somme</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"La somme des nombres pairs de la liste est :"</span>, somme_nombres_pairs )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 </section>
+<section id="exercice-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-3">Exercice 3</h3>
+<p>Écrire un programme en Python qui doit compter le nombre d’occurrences d’une lettre particulière dans une chaîne de caractères donnée. Par exemple, pour la chaîne de caractères “Bonjour tout le monde”, il doit être retourné la valeur 3 pour la chaîne de caractères “o”.</p>
+<div id="editor">
+
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Correction
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Définition de la chaîne de caractères à traiter</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>chaine <span class="op">=</span> <span class="st">" Bonjour tout le monde "</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Définition de la lettre que l’on cherche</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>lettre <span class="op">=</span> ’o’</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialisation du compteur d’ occurrences de la lettre</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>nb_occurrences <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Parcours de chaque caractère de la chaîne</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> caractere <span class="kw">in</span> chaine :</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Vérification si le caractère est égal à la lettre que l ’on cherche</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> caractere <span class="op">==</span> lettre :</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Si oui , on incrémente le compteur d’ occurrences</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        nb_occurrences <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage du nombre d’ occurrences de la lettre</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"La lettre ’</span><span class="sc">{</span> lettre <span class="sc">}</span><span class="ss">’ apparaît </span><span class="sc">{</span> nb_occurrences <span class="sc">}</span><span class="ss"> fois dans la chaîne ’</span><span class="sc">{</span> chaine <span class="sc">}</span><span class="ss"> ’."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 </section>
-<section id="la-boucle-while" class="level2">
-<h2 class="anchored" data-anchor-id="la-boucle-while">La boucle <code>while</code></h2>
-<p>La boucle <code>while</code> exécute des instructions tant que la condition est vraie.</p>
-<p>Syntaxe :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> condition:</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    instruction1</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    instruction2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Attention : une erreur fréquente est d’écrire une condition qui est toujours vraie ou toujours fausse, provoquant une boucle infinie ou jamais exécutée.</p>
+<section id="exercice-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-4">Exercice 4</h3>
+<p>Écrire un programme qui génère toutes les paires de nombres premiers jumeaux inférieures à 1000.</p>
+<p>Pour rappel, deux nombres premiers sont dits jumeaux si leur différence est égale à 2. Par exemple, (3, 5) est une paire de nombres premiers jumeaux car 5-3 = 2.</p>
+<p>Dans le code, on utilisera une fonction est_premier qui prend un entier n en argument, et qui renseigne si l’entier est premier ou pas :</p>
+<pre id="editor">def est_premier (n) :
+    """ Fonction qui renvoie True si le nombre n est premier , False sinon """
+    if n &lt; 2:
+        return False
+    for i in range(2 , int(n **0.5) +1) :
+        if n % i == 0:
+            return False
+        return True
+</pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Correction
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Définition de la chaîne de caractères à traiter</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>chaine <span class="op">=</span> <span class="st">" Bonjour tout le monde "</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Définition de la lettre que l’on cherche</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>lettre <span class="op">=</span> ’o’</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialisation du compteur d’ occurrences de la lettre</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>nb_occurrences <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Parcours de chaque caractère de la chaîne</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> caractere <span class="kw">in</span> chaine :</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Vérification si le caractère est égal à la lettre que l ’on cherche</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> caractere <span class="op">==</span> lettre :</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Si oui , on incrémente le compteur d’ occurrences</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        nb_occurrences <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage du nombre d’ occurrences de la lettre</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"La lettre ’</span><span class="sc">{</span> lettre <span class="sc">}</span><span class="ss">’ apparaît </span><span class="sc">{</span> nb_occurrences <span class="sc">}</span><span class="ss"> fois dans la chaîne ’</span><span class="sc">{</span> chaine <span class="sc">}</span><span class="ss"> ’."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 </section>
-<section id="fonction" class="level2">
-<h2 class="anchored" data-anchor-id="fonction">Fonction</h2>
-<p>Une fonction est un bloc de code réutilisable que l’on définit avant de l’utiliser.</p>
-<p>Définition :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonction():</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">1</span>)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Utilisation :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">3</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ma_fonction()</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">4</span>)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>ma_fonction()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Sortie :</p>
-<pre><code>3
-1
-2
-4
-1
-2</code></pre>
-<p>On peut ajouter des paramètres :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonction(param1, param2):</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(param1)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(param2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">3</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ma_fonction(<span class="dv">5</span>, <span class="dv">6</span>)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">4</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>ma_fonction(<span class="dv">2</span>, <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Sortie :</p>
-<pre><code>3
-5
-6
-4
-2
-0</code></pre>
-<p>On peut aussi retourner une valeur avec <code>return</code>. Par défaut une fonction renvoie <code>None</code> si rien n’est retourné.</p>
-<p>Exemple sans <code>return</code> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonction(param1, param2):</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    resultat <span class="op">=</span> param1 <span class="op">+</span> param2</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ma_fonction(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Affiche :</p>
-<pre><code>None</code></pre>
-<p>Avec <code>return</code> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonction(param1, param2):</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    resultat <span class="op">=</span> param1 <span class="op">+</span> param2</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> resultat</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ma_fonction(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Affiche :</p>
-<pre><code>3</code></pre>
-<p>Le mot-clé <code>return</code> arrête l’exécution de la fonction et renvoie la valeur fournie.</p>
-<p>Une fonction peut accéder à une variable définie à l’extérieur (variable globale), mais le code extérieur ne peut pas accéder aux variables locales définies à l’intérieur de la fonction.</p>
+<section id="exercice-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-5">Exercice 5</h3>
+<p>Écrire un programme Python qui crée une table de multiplication à partir des nombres de 1 à 10. On doit créer une liste (table) de listes(ligne). L’écriture de chaque liste de table doit donner ce résultat :</p>
+<pre id="editor"></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Correction
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> []</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span> , <span class="dv">11</span>) :</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    ligne <span class="op">=</span> []</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span> , <span class="dv">11</span>) :</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        resultat <span class="op">=</span> i <span class="op">*</span> j</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        ligne.append(resultat)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    table.append(ligne)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> table :</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>( ligne )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-5-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-5-1">Exercice 5</h3>
+<p>Écrire un programme en Python qui affiche une Pyramide complète avec des *, en fonction d’un entier N saisi par l’utilisateur.</p>
+<p>Si l’on ajoute le paramètre end avec la valeur ““, la fonction print() ne revient pas à la ligne.</p>
+<p>Exemple : print(“a”, end=““)</p>
+<p>On peut multiplier un texte (une chaîne de caractères) pour le répéter plusieurs fois.</p>
+<p>Par exemple : “a” * 10 donnera “aaaaaaaaaa”</p>
+<p>Exemple de sortie:</p>
+<pre><code>Entrer le nombre de lignes: 4
+   *
+  ***
+ *****
+*******</code></pre>
+<pre id="editor"></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Correction
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Solution 1</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">" "</span><span class="op">*</span>((n<span class="op">-</span><span class="dv">1</span>)<span class="op">-</span>i),<span class="st">"*"</span><span class="op">*</span>((i<span class="op">*</span><span class="dv">2</span>)<span class="op">+</span><span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Solution 2</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>((n<span class="op">-</span><span class="dv">1</span>)<span class="op">-</span>i):</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">" "</span>,end<span class="op">=</span><span class="st">""</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">*</span><span class="dv">2</span>):</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"*"</span>,end<span class="op">=</span><span class="st">""</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"*"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 
 
 </section>
