@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   render:
-    - "Premiere/*/*.ipynb"
+    - "SITE/Premiere/*/*.ipynb"
 
 website:
   title: "NSI"
