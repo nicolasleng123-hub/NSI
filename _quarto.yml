@@ -13,24 +13,25 @@ website:
       - text: "Première"
         menu:
           - text: "IHM"
-            href: Premiere/IHM/index.ipynb
+            href: SITE/Premiere/IHM/index.ipynb
           - text: "Intro python"
-            href: Premiere/IntroPython/index.ipynb
+            href: SITE/Premiere/IntroPython/index.ipynb
   
   sidebar:
     - title: "IHM"
       contents:
-        - Premiere/IHM/index.ipynb
+        - SITE/Premiere/IHM/index.ipynb
     - title: "Intro python"
       contents:
-        - Premiere/IntroPython/index.ipynb
-        - Premiere/IntroPython/variables.ipynb
-        - Premiere/IntroPython/condition.ipynb
-        - Premiere/IntroPython/boucleFor.ipynb
-        - Premiere/IntroPython/boucleWhile.ipynb
-        - Premiere/IntroPython/fonction.ipynb
-        - Premiere/IntroPython/fiche.ipynb
-        - Premiere/IntroPython/controleBlanc.ipynb
+        - SITE/Premiere/IntroPython/index.ipynb
+        - SITE/Premiere/IntroPython/variables.ipynb
+        - SITE/Premiere/IntroPython/condition.ipynb
+        - SITE/Premiere/IntroPython/boucleFor.ipynb
+        - SITE/Premiere/IntroPython/boucleWhile.ipynb
+        - SITE/Premiere/IntroPython/fonction.ipynb
+        - SITE/Premiere/IntroPython/fiche.ipynb
+        - SITE/Premiere/IntroPython/controleBlanc.ipynb
+        - SITE/Premiere/IntroPython/exo.ipynb
         
 
 format:

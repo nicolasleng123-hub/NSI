@@ -1,7 +1,7 @@
 [
   {
-    "objectID": "Premiere/IntroPython/variables.html",
-    "href": "Premiere/IntroPython/variables.html",
+    "objectID": "SITE/Premiere/IntroPython/variables.html",
+    "href": "SITE/Premiere/IntroPython/variables.html",
     "title": "Variables",
     "section": "",
     "text": "De la même manière que dans votre chambre chaque objet a (normalement) une place attitrée, un ordinateur (dont le rôle peut se résumer à «manipuler très vite des données») va assigner à chaque objet une place particulière dans son espace-mémoire. Et il lui assignera un nom (choisi par l’utilisateur) afin de pouvoir accéder à cette valeur.\nNous ne rentrerons pas dans le détail du processus d’allocation-mémoire, nous retiendrons juste ceci : pour manipuler un objet, il faut qu’il déjà qu’il ait un nom. C’est par cela que nous allons commencer :\n\n\n\n\n\n\nNotePremière variable\n\n\n\nConsidérons la phrase ‘nous allons stocker le prix du spectacle dans une variable a, qui vaudra au départ 32.’\n\n\nIl y a plusieurs commentaires à faire sur une telle annonce :\n\nDans le problème que l’on cherche à modéliser, le prix du spectacle est une donnée importante, qui va peut-être évoluer (ou pas !).\nPour la manipuler plus simplement, on va la désigner par un nom, le nom de la variable (ici, le nom a est particulièrement mal choisi, voir D. Bonnes pratiques de nommage)\nComme en mathématiques, le nom de cette variable va désigner une valeur qui peut changer (varier) au cours du temps (encore une fois : ou pas).\nCette valeur est fixée au départ à 32. On dira en informatique qu’elle est initialisée à 32.\nSi cette valeur ne change pas, on dira qu’elle est constante. Cela peut paraître inutile de donner un nom à quelque chose qui ne change pas, mais cela est très utile de définir les constantes au début d’un programme.\n\n\n\n\nLa phrase précédente donnera donc lieu à la ligne Python suivante :\na = 32\n\n\n\n\n\n\nWarningAttention\n\n\n\nLe symbole = ici utilisé n’a rien à voir avec le symbole = utilisé en mathématique. On dit qu’on a affecté à a la valeur 32, et il faut se représenter mentalement cette action par l’écriture a ← 32.\n\n\nUne fois la valeur 32 stockée dans la variable a, on peut alors utiliser cette variable :\nprint(a)\na = a+3\nprint(a)\nprint(b)\nRemarquez bien l’erreur lorsqu’on a fait appel à une variable b qui n’avait jamais été définie, comme le dit explicitement le message NameError: name ‘b’ is not defined",
@@ -10,36 +10,8 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Tableau de bord",
-    "section": "",
-    "text": "Les indicateurs ci-dessous sont générés par le script Node.js, puis intégrés automatiquement dans cette page lors du rendu Quarto.\n\n\n\n\n\n\n\n\nIndicateur\nValeur\nÉvolution\n\n\n\n\nPages publiées\n12\n+3\n\n\nVisiteurs cette semaine\n248\n+18%\n\n\nTemps moyen de lecture\n4 min\n+12%"
-  },
-  {
-    "objectID": "index.html#résumé",
-    "href": "index.html#résumé",
-    "title": "Tableau de bord",
-    "section": "",
-    "text": "Les indicateurs ci-dessous sont générés par le script Node.js, puis intégrés automatiquement dans cette page lors du rendu Quarto.\n\n\n\n\n\n\n\n\nIndicateur\nValeur\nÉvolution\n\n\n\n\nPages publiées\n12\n+3\n\n\nVisiteurs cette semaine\n248\n+18%\n\n\nTemps moyen de lecture\n4 min\n+12%"
-  },
-  {
-    "objectID": "index.html#pipeline",
-    "href": "index.html#pipeline",
-    "title": "Tableau de bord",
-    "section": "Pipeline",
-    "text": "Pipeline\nflowchart LR\n    A[Node.js] --&gt;|génère| B[data/metrics.md]\n    B --&gt;|intègre| C[Quarto]\n    C --&gt; D[site HTML]\nPour reconstruire le rapport après une modification des données :\nnpm run render"
-  },
-  {
-    "objectID": "Premiere/IntroPython/index.html",
-    "href": "Premiere/IntroPython/index.html",
-    "title": "Intro Python",
-    "section": "",
-    "text": "This is a placeholder notebook created to fix JSON parse errors."
-  },
-  {
-    "objectID": "Premiere/IntroPython/variables.html#pourquoi-des-variables",
-    "href": "Premiere/IntroPython/variables.html#pourquoi-des-variables",
+    "objectID": "SITE/Premiere/IntroPython/variables.html#pourquoi-des-variables",
+    "href": "SITE/Premiere/IntroPython/variables.html#pourquoi-des-variables",
     "title": "Variables",
     "section": "",
     "text": "De la même manière que dans votre chambre chaque objet a (normalement) une place attitrée, un ordinateur (dont le rôle peut se résumer à «manipuler très vite des données») va assigner à chaque objet une place particulière dans son espace-mémoire. Et il lui assignera un nom (choisi par l’utilisateur) afin de pouvoir accéder à cette valeur.\nNous ne rentrerons pas dans le détail du processus d’allocation-mémoire, nous retiendrons juste ceci : pour manipuler un objet, il faut qu’il déjà qu’il ait un nom. C’est par cela que nous allons commencer :\n\n\n\n\n\n\nNotePremière variable\n\n\n\nConsidérons la phrase ‘nous allons stocker le prix du spectacle dans une variable a, qui vaudra au départ 32.’\n\n\nIl y a plusieurs commentaires à faire sur une telle annonce :\n\nDans le problème que l’on cherche à modéliser, le prix du spectacle est une donnée importante, qui va peut-être évoluer (ou pas !).\nPour la manipuler plus simplement, on va la désigner par un nom, le nom de la variable (ici, le nom a est particulièrement mal choisi, voir D. Bonnes pratiques de nommage)\nComme en mathématiques, le nom de cette variable va désigner une valeur qui peut changer (varier) au cours du temps (encore une fois : ou pas).\nCette valeur est fixée au départ à 32. On dira en informatique qu’elle est initialisée à 32.\nSi cette valeur ne change pas, on dira qu’elle est constante. Cela peut paraître inutile de donner un nom à quelque chose qui ne change pas, mais cela est très utile de définir les constantes au début d’un programme.\n\n\n\n\nLa phrase précédente donnera donc lieu à la ligne Python suivante :\na = 32\n\n\n\n\n\n\nWarningAttention\n\n\n\nLe symbole = ici utilisé n’a rien à voir avec le symbole = utilisé en mathématique. On dit qu’on a affecté à a la valeur 32, et il faut se représenter mentalement cette action par l’écriture a ← 32.\n\n\nUne fois la valeur 32 stockée dans la variable a, on peut alors utiliser cette variable :\nprint(a)\na = a+3\nprint(a)\nprint(b)\nRemarquez bien l’erreur lorsqu’on a fait appel à une variable b qui n’avait jamais été définie, comme le dit explicitement le message NameError: name ‘b’ is not defined",
@@ -48,8 +20,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/variables.html#b.-le-fonctionnement-interne",
-    "href": "Premiere/IntroPython/variables.html#b.-le-fonctionnement-interne",
+    "objectID": "SITE/Premiere/IntroPython/variables.html#b.-le-fonctionnement-interne",
+    "href": "SITE/Premiere/IntroPython/variables.html#b.-le-fonctionnement-interne",
     "title": "Variables",
     "section": "B. Le fonctionnement interne",
     "text": "B. Le fonctionnement interne\n\nB.1 Explication simplifiée\nIl est possible d’expliquer le fonctionnement interne de l’affectation des variables par la métaphore des tiroirs :\nÉcrire l’instruction :\na = 2\nva provoquer chez l’ordinateur le comportement suivant :\n\nEst-ce que je possède déjà un tiroir appelé a ?\nsi oui, je me positionne devant.\nsi non, je crée un tiroir appelé a.\n\nJ’ouvre le tiroir et j’y dépose la valeur numérique 2. Si le tiroir contenait déjà une valeur, celle-ci disparaît (on dit qu’elle est écrasée).\n\n\nB.2 Une histoire en 2 temps : évaluation, affectation\nObservons l’instruction\na = 2 + 3\n\nB.2.1 Étape 1 : l’évaluation\nPython va prendre la partie à droite du signe égal et va l’évaluer, ce qui signifie qu’il va essayer de lui donner une valeur. Dans nos exemples, cette valeur sera numérique, mais elle peut être d’un autre type (voir plus loin)\nIci, Python effectue le calcul 2 + 3 et l’évalue à la valeur 5.\n\n\nB.2.2 Étape 2 : l’affectation\nUne fois évaluée l’expression à droite du signe =, il ne reste plus qu’à l’affecter à la variable (déjà existante ou pas) située à gauche du signe =.\nComme expliqué précédemment, un «lien» est fait entre le nom de la variable et l’adresse-mémoire qui contient la valeur évaluée. a sera donc lié à la valeur 5. Plus simplement, on dira que «a vaut 5»\n\n\nB.2.2 L’incrémentation d’une variable.\n«Incrémenter» une variable signifie l’augmenter.\nImaginons une variable appelée compteur. Au démarrage de notre programme, elle est initialisée à la valeur 0.\ncompteur = 0\nConsidérons qu’à un moment du programme, cette variable doit être modifiée, par exemple en lui ajoutant 1.\nEn Python, cela s’écrira :\ncompteur = compteur + 1\n\nOn évalue la partie droite de l’égalité, donc l’expression compteur + 1.\nOn va donc chercher le contenu de la variable compteur. Si celle-ci n’existe pas, un message d’erreur est renvoyé.\nOn additionne 1 au contenu de la variable compteur.\nOn écrase le contenu actuel de la variable compteur avec la valeur obtenue au 3.\n\nÀ la fin de ces opérations, la variable compteur a bien augmenté de 1.\nCette procédure d’incrémentation est très très classique, il faut la maîtriser parfaitement !\n\n\n\n\n\n\nNote\n\n\n\nil existe aussi une syntaxe particulière, un peu plus courte : compteur += 1\n\n\n\n\nB.3.3 L’échange de variables\nAprès l’incrémentation, une autre technique de base reviendra fréquemment dans nos codes : l’échange de variables.\nImaginons les variables suivantes :\na = 3 \nb = 5\nLe but est d’échanger les valeurs de a et de b. Méthode naïve :\na = b\nb = a\nQue valent a et b maintenant ?\nMalheureusment : &gt;&gt;&gt; a 5 &gt;&gt;&gt; b 5\nLa variable a a été écrasée dès qu’on lui a donné la valeur de la variable b.\nComment la préserver ?\nLa situation est similaire au problème suivant : comment échanger le contenu de ces deux verres ?\n\n\n\nverres\n\n\nLa méthode est évidente : il nous faut un troisième verre.\nNous allons faire de même pour nos variables. Nous allons utiliser une variable temporaire (on parle aussi de variable tampon) pour conserver la mémoire de la valeur de a (par exemple) avant que celle-ci ne se fasse écraser :\ntemp = a \na = b\nb = temp",
@@ -58,8 +30,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/variables.html#c.-différents-types-de-variables",
-    "href": "Premiere/IntroPython/variables.html#c.-différents-types-de-variables",
+    "objectID": "SITE/Premiere/IntroPython/variables.html#c.-différents-types-de-variables",
+    "href": "SITE/Premiere/IntroPython/variables.html#c.-différents-types-de-variables",
     "title": "Variables",
     "section": "C. Différents types de variables",
     "text": "C. Différents types de variables\nPour l’instant, les variables que nous avons manipulées contiennent toutes des nombres entiers.\nSauf les maisons de Poudlard, qui sont des mots chaînes de caractères.\nPour différencier la nature de ce que peut contenir une variable, on parle alors de type de variable.\nEn voici quelques uns, que nous découvrirons au fil de l’année :\n\n\n\n\n\n\n\n\nType Python\nTraduction\nExemple\n\n\n\n\nint\nentier\n42\n\n\nfloat\nflottant (décimal)\n3.1416\n\n\nstr\nchaîne de caractères (string)\n“NSI”\n\n\nbool\nbooléen (True ou False)\n\n\n\ntuple\np-uplet\n(255, 127, 0)\n\n\nlist\nliste\n[0, 1, 2, 3, 4, 5]\n\n\ndict\ndictionnaire\n{‘Homer’:43, ‘Marge’:41, ‘Bart’:12, ‘Lisa’:10, ‘Maggie’:4}\n\n\nfunction\nfonction\nprint\n\n\n\nComment connaître le type d’une variable ? Il suffit dans la console d’utiliser la fonction type.\na = 1\ntype(a)\n&lt;class ‘int’&gt;\n\nC.1 Python et le typage dynamique⚓︎\nJusqu’à présent, nous ne nous sommes pas occupés de préciser à Python le type de notre variable.\na = 1\ntype(a)\nMais dans certains langages, c’est obligatoire. En C par exemple, il faut écrire :\nint a = 1\nCela signifie (pour le langage C) que notre variable a n’aura pas le droit de contenir autre chose qu’un nombre entier. Si on écrit ensuite\na = \"test\";\nLe compilateur C renverra une erreur : on ne peut pas stocker une chaîne de caractères dans une variable qu’on a créée comme étant de type entier.\nEt en Python ?\n&gt;&gt;&gt; a = 3\n&gt;&gt;&gt; type(a)\n&lt;class 'int'&gt;\n&gt;&gt;&gt; a = \"test\"\n&gt;&gt;&gt; type(a)\n&lt;class 'str'&gt;\nPython a changé tout seul le type de notre variable, sans intervention. On parle de typage dynamique.",
@@ -68,8 +40,18 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/boucleFor.html",
-    "href": "Premiere/IntroPython/boucleFor.html",
+    "objectID": "SITE/Premiere/IntroPython/exo.html",
+    "href": "SITE/Premiere/IntroPython/exo.html",
+    "title": "EXO",
+    "section": "",
+    "text": "Exercice 1 Divisible par 7\nDans une fonction nommée Exo1 prenant en paramètre un nombre entier nb, afficher si ce nombre est divisible par 7 ou pas, puis renvoyer le booléen True si divisible par 7 et le booléen False sinon.\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\ndef Exo1(n):\n  return n % 7 == 0\n\n\n\n\n\nExercice 2 : Nombres pairs\n\nDans une fonction nommée Exo2A prenant en paramètre un entier naturel n, afficher les nombres pairs entre 2 et n inclus à l’aide uniquement d’une boucle bornée (for).\nDans une fonction nommée Exo2B prenant en paramètre un entier naturel n, afficher les nombres pairs entre 2 et n inclus à l’aide uniquement d’une boucle non-bornée (while).\n\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\ndef Exo2A(n):\n    for nbPaire in range(0,n,2):\n        print(nbPaire)\n\ndef Exo2B(n):\n    nbPaire = 0\n    while nbPaire &lt; n :\n        print(nbPaire)\n        nbPaire = nbPaire + 2\n\n\n\n\n\nExercice 3 : Somme\nDans une fonction nommée Exo3 prenant en paramètre un entier naturel n, vérifier que n &gt; 0 (précondition sur l’argument) puis renvoyer le résultat 0 + 1 + 2 + … + (n – 1) + n si la condition est vérifiée, et -1 sinon.\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\ndef Exo3(n):\n    if n &lt; 0 :\n        return -1\n    somme = 0\n    for i in range(n):\n        somme = somme + i\n    return somme\n\n\n\n\n\nExercice 4 : Quel est mon âge ?\nOn représente une date par 3 nombres : j le jour du mois, m le numéro du mois (de 1 à 12) et a l’année. On considère ici, pour simplifier, que tous les mois comportent 30 jours (soit 360 jours par année).\n\nEcrire une fonction Exo4A qui prend deux dates (j1, m1, a1 et j2, m2, a2) en arguments (dates après J.-C.) et renvoie True si la première date est antérieure (strictement avant) la seconde et False sinon. Les préconditions sur les arguments doivent être vérifiées dans la fonction. Dans le cas contraire, la fonction ne renvoie rien.\nEcrire une fonction Exo4B qui prend en arguments la date de naissance d’une personne et une autre date (la date de calcul) et renvoie l’âge de la personne à la date de calcul, en année (nombre à virgule). Les préconditions sur les arguments doivent être vérifiées dans la fonction. Dans le cas contraire, la fonction ne renvoie rien.\n\nExemple : Exo4B (24,3,1981,10,2,1996) renvoie environ 14,9 ans\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\ndef Exo4A(j1, m1, a1, j2, m2, a2):\n    if not (1 &lt;= j1 &lt;= 30 and 1 &lt;= m1 &lt;= 12 and a1 &gt;= 1):\n        return\n\n    if not (1 &lt;= j2 &lt;= 30 and 1 &lt;= m2 &lt;= 12 and a2 &gt;= 1):\n        return\n\n    if a1 &lt; a2:\n        return True\n    elif a1 == a2 and m1 &lt; m2:\n        return True\n    elif a1 == a2 and m1 == m2 and j1 &lt; j2:\n        return True\n    else:\n        return False\n\n\ndef Exo4B(j1, m1, a1, j2, m2, a2):\n    if not (1 &lt;= j1 &lt;= 30 and 1 &lt;= m1 &lt;= 12 and a1 &gt;= 1):\n        return\n\n    if not (1 &lt;= j2 &lt;= 30 and 1 &lt;= m2 &lt;= 12 and a2 &gt;= 1):\n        return\n\n    if not Exo4A(j1, m1, a1, j2, m2, a2):\n        return\n\n    naissance = a1 * 360 + m1 * 30 + j1\n    calcul = a2 * 360 + m2 * 30 + j2\n\n    age = (calcul - naissance) / 360\n\n    return age\n\n\n\n\n\nExercice 5 : Lancé de dé\nOn peut générer des entiers pseudo-aléatoires compris entre A et B inclus en python au moyen de la fonction randint(A,B), que l’on importe depuis la bibliothèque random.\n\nDans une fonction sans argument nommée Exo5A, simuler 10 lancers d’un dé à 6 faces et renvoyer la moyenne des résultats obtenus.\nDans une fonction sans argument nommée Exo5B appelant la fonction précédente, simuler 20 expériences dont chacune consiste à lancer 10 fois le dé, afficher la moyenne à chaque fois ainsi que la plus grande moyenne obtenue lors des 20 expériences à la fin.\n\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nimport random\n\ndef Exo5A():\n    somme = 0 \n    for _ in range(10):\n        somme = somme + random.randint(1,6)\n    return somme/10\n\ndef Exo5B():\n    somme = 0 \n    for _ in range(20):\n        somme = somme + Exo5A()\n    return somme / 20",
+    "crumbs": [
+      "EXO"
+    ]
+  },
+  {
+    "objectID": "SITE/Premiere/IntroPython/boucleFor.html",
+    "href": "SITE/Premiere/IntroPython/boucleFor.html",
     "title": "Boucle For",
     "section": "",
     "text": "En mathématiques, on dit qu’un ensemble est dénombrable lorsqu’on peut associer à chaque élément de l’ensemble un nombre (traditionnellement 1, 2, 3 …)\n\nles fraises Tagada d’un paquet sont dénombrables.\nles voitures qui roulent sur l’autoroute sont dénombrables.\nl’eau qui coule d’un robinet n’est pas dénombrable. En informatique, il existe un concept similaire qui va désigner les objets que l’on peut énumérer, c’est-à-dire les décomposer en une succession ordonnée d’éléments. On les appelle les énumérables ou les itérables (Python utilise le mot anglais iterable).\nla variable “NSI” (qui est de type String) est énumérable : on peut la décomposer en N, S, I.\nla variable [4, 3, 17] (qui est de type List) est énumérable : on peut la décomposer en 4, 3, 17.\nla variable 5 (qui est de type Int) n’est PAS énumérable : on ne peut pas la décomposer. ## 2. Itérer sur les itérables : la boucle for … in …⚓︎ ### 2.1 Itérer sur une chaîne de caractères⚓︎ La principale caractéristique d’un ordinateur est d’exceller dans les opérations répétitives.\n\n(je vous laisse retrouver la citation de Gérard Berry, professeur au Collège de France, commençant par «L’ordinateur est…»)\nIl existe donc une instruction permettant de faire une (ou plusieurs) action(s) à chaque itération sur un élément énumérable.\n\n\n\n\n\n\nNoteExemple 1\n\n\n\nLe programme suivant :\nfor k in 'NSI':\n    print(k)\nva donner ceci :\nN\nS\nI\n\n\n\n\n\n\n\n\nNoteAnalyse grâce à PythonTutor\n\n\n\nÉtudions, grâce à PythonTutor, le détail de cette exécution.\nCliquez sur Next et observez bien l’évolution de la variable k.   La variable k prend donc successivement toutes les lettre de la chaîne de caractère “NSI”.\nPour chaque valeur de k, la ou les instruction(s) situées de manière indentée sous la ligne du for seront exécutées.\n\n\nIci, il y a simplement un print(k), donc chaque lettre de “NSI” s’affiche l’une après l’autre.\nfor m in 'NASA':\n    print(\"bonjour\")\nDans cet exercice, la variable de boucle m est muette : elle n’apparaît dans les instructions indentées sous le for.\nLa variable m prend successivement les valeurs ‘N, ’A’, ‘S’ et ‘A’, mais on ne la voit pas.\n\n\nL’indentation est primordiale en Python : c’est elle qui indique les blocs de code. Dans d’autres langages, ils peuvent être délimités par des accolades { et }.\nDans une boucle, tout ce qui sera indenté sous le for sera répété un certain nombre de fois. Puis le code continuera : on dit qu’on sera sorti de la boucle.\nObservez la différence entre l’exécution des codes suivants :\nfor m in 'NASA':\n    print(\"bonjour\")\n    print(\"au revoir\")\net\nfor m in 'NASA':\n    print(\"bonjour\")\nprint(\"au revoir\")\net persuadez-vous de l’importance d’être vigilant sur l’indentation !\n\n\n\n\n\n\nWarningComment éviter les erreurs classiques\n\n\n\nQuand vous écrivez une boucle for … in …, veillez bien à :\n\nfinir la ligne du for par les deux points :\nindenter sous le for les instructions qui doivent être répétées. Si l’indentation ne s’est pas faite automatiquement après appui sur la touche Entrée, c’est que vous avez oublié les :.\n\n\n\n\n\n\n\n\n\n\n\n\nNoteExemple\n\n\n\nLe programme suivant :\nfor jour in [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\"]:\n    print(\"je vais au lycée le\", jour)\nva donner ceci :\nje vais au lycée le lundi\nje vais au lycée le mardi\nje vais au lycée le mercredi\nje vais au lycée le jeudi\nje vais au lycée le vendredi\n\n\n\n\n\n\n\n\nNoteAnalyse grâce à PythonTutor\n\n\n\nÉtudions, grâce à PythonTutor, le détail de cette exécution.\nCliquez sur Next et observez bien l’évolution de la variable k.   La variable k prend donc successivement toutes les lettre de la chaîne de caractère “NSI”.\nPour chaque valeur de k, la ou les instruction(s) situées de manière indentée sous la ligne du for seront exécutées.\n\n\n⚠ Attention: très souvent, l’objet énumérable que la boucle va parcourir aura été au préalable stocké dans une variable :\n\n\n\n\n\n\nNoteExemple\n\n\n\nLe programme précédent est équivalent à :\nsemaine = [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\"]\nfor jour in semaine:\n    print(\"je vais au lycée le\", jour)\n\n\nNotez l’importance d’avoir choisi des noms de variables explicites : ils aident grandement à la lisibilité du code.",
@@ -78,8 +60,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/boucleFor.html#les-énumérables",
-    "href": "Premiere/IntroPython/boucleFor.html#les-énumérables",
+    "objectID": "SITE/Premiere/IntroPython/boucleFor.html#les-énumérables",
+    "href": "SITE/Premiere/IntroPython/boucleFor.html#les-énumérables",
     "title": "Boucle For",
     "section": "",
     "text": "En mathématiques, on dit qu’un ensemble est dénombrable lorsqu’on peut associer à chaque élément de l’ensemble un nombre (traditionnellement 1, 2, 3 …)\n\nles fraises Tagada d’un paquet sont dénombrables.\nles voitures qui roulent sur l’autoroute sont dénombrables.\nl’eau qui coule d’un robinet n’est pas dénombrable. En informatique, il existe un concept similaire qui va désigner les objets que l’on peut énumérer, c’est-à-dire les décomposer en une succession ordonnée d’éléments. On les appelle les énumérables ou les itérables (Python utilise le mot anglais iterable).\nla variable “NSI” (qui est de type String) est énumérable : on peut la décomposer en N, S, I.\nla variable [4, 3, 17] (qui est de type List) est énumérable : on peut la décomposer en 4, 3, 17.\nla variable 5 (qui est de type Int) n’est PAS énumérable : on ne peut pas la décomposer. ## 2. Itérer sur les itérables : la boucle for … in …⚓︎ ### 2.1 Itérer sur une chaîne de caractères⚓︎ La principale caractéristique d’un ordinateur est d’exceller dans les opérations répétitives.\n\n(je vous laisse retrouver la citation de Gérard Berry, professeur au Collège de France, commençant par «L’ordinateur est…»)\nIl existe donc une instruction permettant de faire une (ou plusieurs) action(s) à chaque itération sur un élément énumérable.\n\n\n\n\n\n\nNoteExemple 1\n\n\n\nLe programme suivant :\nfor k in 'NSI':\n    print(k)\nva donner ceci :\nN\nS\nI\n\n\n\n\n\n\n\n\nNoteAnalyse grâce à PythonTutor\n\n\n\nÉtudions, grâce à PythonTutor, le détail de cette exécution.\nCliquez sur Next et observez bien l’évolution de la variable k.   La variable k prend donc successivement toutes les lettre de la chaîne de caractère “NSI”.\nPour chaque valeur de k, la ou les instruction(s) situées de manière indentée sous la ligne du for seront exécutées.\n\n\nIci, il y a simplement un print(k), donc chaque lettre de “NSI” s’affiche l’une après l’autre.\nfor m in 'NASA':\n    print(\"bonjour\")\nDans cet exercice, la variable de boucle m est muette : elle n’apparaît dans les instructions indentées sous le for.\nLa variable m prend successivement les valeurs ‘N, ’A’, ‘S’ et ‘A’, mais on ne la voit pas.\n\n\nL’indentation est primordiale en Python : c’est elle qui indique les blocs de code. Dans d’autres langages, ils peuvent être délimités par des accolades { et }.\nDans une boucle, tout ce qui sera indenté sous le for sera répété un certain nombre de fois. Puis le code continuera : on dit qu’on sera sorti de la boucle.\nObservez la différence entre l’exécution des codes suivants :\nfor m in 'NASA':\n    print(\"bonjour\")\n    print(\"au revoir\")\net\nfor m in 'NASA':\n    print(\"bonjour\")\nprint(\"au revoir\")\net persuadez-vous de l’importance d’être vigilant sur l’indentation !\n\n\n\n\n\n\nWarningComment éviter les erreurs classiques\n\n\n\nQuand vous écrivez une boucle for … in …, veillez bien à :\n\nfinir la ligne du for par les deux points :\nindenter sous le for les instructions qui doivent être répétées. Si l’indentation ne s’est pas faite automatiquement après appui sur la touche Entrée, c’est que vous avez oublié les :.\n\n\n\n\n\n\n\n\n\n\n\n\nNoteExemple\n\n\n\nLe programme suivant :\nfor jour in [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\"]:\n    print(\"je vais au lycée le\", jour)\nva donner ceci :\nje vais au lycée le lundi\nje vais au lycée le mardi\nje vais au lycée le mercredi\nje vais au lycée le jeudi\nje vais au lycée le vendredi\n\n\n\n\n\n\n\n\nNoteAnalyse grâce à PythonTutor\n\n\n\nÉtudions, grâce à PythonTutor, le détail de cette exécution.\nCliquez sur Next et observez bien l’évolution de la variable k.   La variable k prend donc successivement toutes les lettre de la chaîne de caractère “NSI”.\nPour chaque valeur de k, la ou les instruction(s) situées de manière indentée sous la ligne du for seront exécutées.\n\n\n⚠ Attention: très souvent, l’objet énumérable que la boucle va parcourir aura été au préalable stocké dans une variable :\n\n\n\n\n\n\nNoteExemple\n\n\n\nLe programme précédent est équivalent à :\nsemaine = [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\"]\nfor jour in semaine:\n    print(\"je vais au lycée le\", jour)\n\n\nNotez l’importance d’avoir choisi des noms de variables explicites : ils aident grandement à la lisibilité du code.",
@@ -88,18 +70,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/boucleFor.html#exemple-1",
-    "href": "Premiere/IntroPython/boucleFor.html#exemple-1",
-    "title": "Boucle For",
-    "section": "Exemple 1",
-    "text": "Exemple 1\nLe programme suivant :\nfor k in 'NSI':\n    print(k)\nva donner ceci :\nN\nS\nI",
-    "crumbs": [
-      "Boucle For"
-    ]
-  },
-  {
-    "objectID": "Premiere/IntroPython/boucleFor.html#comment-répéter-n-fois-la-même-action",
-    "href": "Premiere/IntroPython/boucleFor.html#comment-répéter-n-fois-la-même-action",
+    "objectID": "SITE/Premiere/IntroPython/boucleFor.html#comment-répéter-n-fois-la-même-action",
+    "href": "SITE/Premiere/IntroPython/boucleFor.html#comment-répéter-n-fois-la-même-action",
     "title": "Boucle For",
     "section": "3. Comment répéter n fois la même action ?⚓︎",
     "text": "3. Comment répéter n fois la même action ?⚓︎\nComment effectuer la même chose en Python ?\nComment répéter 10 fois la phrase “We’re up all night to get lucky” ?\nNous pourrions nous en sortir par\nfor k in \"blablablab\": #n'importe quel mot de 10 caractères ferait l'affaire...\n    print(\"We're up all night to get lucky\")\nmais il doit clairement y avoir mieux…\nIl y a mieux !\n\n\n\n\n\n\nNoteL’ensemble range\n\n\n\nLe programme suivant :\nfor i in range(5):\n    print(\"We're up all night to get lucky\")\nva donner ceci :\nWe're up all night to get lucky\nWe're up all night to get lucky\nWe're up all night to get lucky\nWe're up all night to get lucky\nWe're up all night to get lucky",
@@ -108,8 +80,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/boucleFor.html#tout-sur-le-range.",
-    "href": "Premiere/IntroPython/boucleFor.html#tout-sur-le-range.",
+    "objectID": "SITE/Premiere/IntroPython/boucleFor.html#tout-sur-le-range.",
+    "href": "SITE/Premiere/IntroPython/boucleFor.html#tout-sur-le-range.",
     "title": "Boucle For",
     "section": "4. Tout sur le range.⚓︎",
     "text": "4. Tout sur le range.⚓︎\n\n4.1 Retour sur l’exemple précédent.\nSi nous rendions la variable i moins muette ?\nfor i in range(5):\n    print(i, \"We're up all night to get lucky\")\nva donner ceci :\n0 We're up all night to get lucky\n1 We're up all night to get lucky\n2 We're up all night to get lucky\n3 We're up all night to get lucky\n4 We're up all night to get lucky\ni prend donc successivement toutes les valeurs entières entre 0 et 4. Il y en a bien 5.\n\n\n4.2 Utilisation minimale de l’objet range()\n\n\n\n\n\n\nNoteSyntaxe minimale de range()\n\n\n\nLe programme suivant :\nfor k in range(4):\n    print(k)\nva donner ceci :\n1\n2\n3\n4\nInterprétation : faire parcourir à une variable k l’ensemble range(n) va faire prendre à k les valeurs 0, 1, 2, …, n-1.\n\n\n\n\n4.3 Utilisation avancée de l’objet range()\n\n\n\n\n\n\nNoteSyntaxe complète de range()\n\n\n\nLe programme suivant :\nfor k in range(5, 15, 2):\n    print(k)\nva donner ceci :\n5\n7\n9\n11\n13\nInterprétation : faire parcourir à k l’ensemble range(start, stop, step) fait : * démarrer k à la valeur start , * progresser k de step en step tant que k est strictement inférieur à stop .\n\n\nRemarques : * si le start est omis, il vaut 0 par défaut. * si le step est omis, il vaut 1 par défaut.",
@@ -118,8 +90,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/boucleFor.html#une-situation-classique-la-double-boucle",
-    "href": "Premiere/IntroPython/boucleFor.html#une-situation-classique-la-double-boucle",
+    "objectID": "SITE/Premiere/IntroPython/boucleFor.html#une-situation-classique-la-double-boucle",
+    "href": "SITE/Premiere/IntroPython/boucleFor.html#une-situation-classique-la-double-boucle",
     "title": "Boucle For",
     "section": "5. Une situation classique : la double boucle",
     "text": "5. Une situation classique : la double boucle\nIl est très souvent utile d’imbriquer une boucle dans une autre, notamment lors du parcours de tous les pixels d’une image. Prenons pour l’instant un exemple numérique.\nfor a in range(1,5):\n    for b in range(1,4):\n        p = a * b\n        print(a, '*', b, '=', p)\nva donner ceci :\n1 * 1 = 1\n1 * 2 = 2\n1 * 3 = 3\n2 * 1 = 2\n2 * 2 = 4\n2 * 3 = 6\n3 * 1 = 3\n3 * 2 = 6\n3 * 3 = 9\n4 * 1 = 4\n4 * 2 = 8\n4 * 3 = 12",
@@ -128,8 +100,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/boucleFor.html#pour-conclure",
-    "href": "Premiere/IntroPython/boucleFor.html#pour-conclure",
+    "objectID": "SITE/Premiere/IntroPython/boucleFor.html#pour-conclure",
+    "href": "SITE/Premiere/IntroPython/boucleFor.html#pour-conclure",
     "title": "Boucle For",
     "section": "Pour conclure",
     "text": "Pour conclure\n\nLa boucle for … in … s’utilise lorsque :\n\non veut parcourir un à un les éléments d’un objet itérable (une chaîne de caractère, une liste, un tuple, un dictionnaire…)\non veut répéter une action un nombre de fois connu à l’avance. On parle de boucle bornée.\n\nLes instructions répétées peuvent - mais ce n’est pas obligatoire - faire appel à la variable de boucle, mais il ne faut pas que ces instructions la modifient.\nNe pas oublier les : et l’indentation ! range(n) génère une séquence de n nombres entiers: on s’en servira dès qu’on aura besoin de répéter n fois des instructions.",
@@ -138,8 +110,18 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/fiche.html",
-    "href": "Premiere/IntroPython/fiche.html",
+    "objectID": "SITE/Premiere/IntroPython/controleBlanc.html",
+    "href": "SITE/Premiere/IntroPython/controleBlanc.html",
+    "title": "Controle",
+    "section": "",
+    "text": "NoteConcaténation de caractères\n\n\n\nIl est possible de coller (le vrai mot est concaténer) deux chaînes de caractères par l’opérateur + :\n&gt;&gt;&gt; \"a\" + \"b\"\n'ab'\n\n\n\nExercice 1\nSur un jeu d’échecs, les cases sont repérées par une lettre (de A jusqu’à H) et par un chiffre (de 1 jusqu’à 8).\nLes cases sont donc A1, A2, A3, …, H7, H8.\nProposer un code qui écrit toutes les cases possibles.\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nfor lettre in 'ABCDEFGH':\n    for chiffre in '12345678':\n        case = lettre + chiffre\n        print(case)\n\n\n\n\n\nExercice 2\n\n\nVous disposez d’une liste de nombres [2, 5, 7, 10, 13, 18].\n\n\nÉcrivez un programme en Python qui calcule la somme de tous les nombres pairs de la liste à l’aide d’une boucle for.\n\n\nAffichez ensuite cette somme à l’écran.\n\n\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nliste_nombres = [2 , 5 , 7 , 10 , 13 , 18]\nsomme_nombres_pairs = 0\nfor nombre in liste_nombres :\n    if nombre % 2 == 0: # On vérifie si le nombre est pair\n        somme_nombres_pairs += nombre # On ajoute le nombre à la somme\n\nprint(\"La somme des nombres pairs de la liste est :\", somme_nombres_pairs )\n\n\n\n\n\nExercice 3\nÉcrire un programme en Python qui doit compter le nombre d’occurrences d’une lettre particulière dans une chaîne de caractères donnée. Par exemple, pour la chaîne de caractères “Bonjour tout le monde”, il doit être retourné la valeur 3 pour la chaîne de caractères “o”.\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\n# Définition de la chaîne de caractères à traiter\nchaine = \" Bonjour tout le monde \"\n# Définition de la lettre que l’on cherche\nlettre = ’o’\n# Initialisation du compteur d’ occurrences de la lettre\nnb_occurrences = 0\n# Parcours de chaque caractère de la chaîne\nfor caractere in chaine :\n    # Vérification si le caractère est égal à la lettre que l ’on cherche\n    if caractere == lettre :\n        # Si oui , on incrémente le compteur d’ occurrences\n        nb_occurrences += 1\n# Affichage du nombre d’ occurrences de la lettre\nprint(f\"La lettre ’{ lettre }’ apparaît { nb_occurrences } fois dans la chaîne ’{ chaine } ’.\")\n\n\n\n\n\nExercice 4\nÉcrire un programme qui génère toutes les paires de nombres premiers jumeaux inférieures à 1000.\nPour rappel, deux nombres premiers sont dits jumeaux si leur différence est égale à 2. Par exemple, (3, 5) est une paire de nombres premiers jumeaux car 5-3 = 2.\nDans le code, on utilisera une fonction est_premier qui prend un entier n en argument, et qui renseigne si l’entier est premier ou pas :\ndef est_premier (n) :\n    \"\"\" Fonction qui renvoie True si le nombre n est premier , False sinon \"\"\"\n    if n &lt; 2:\n        return False\n    for i in range(2 , int(n **0.5) +1) :\n        if n % i == 0:\n            return False\n    return True\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nfor n in range(2, 1000):\n    if est_premier(n) and est_premier(n + 2):\n        print(n, n + 2)\n\n\n\n\n\nExercice 5\nÉcrire un programme en Python qui affiche une Pyramide complète avec des *, en fonction d’un entier N saisi par l’utilisateur.\nSi l’on ajoute le paramètre end avec la valeur ““, la fonction print() ne revient pas à la ligne.\nExemple : print(“a”, end=““)\nOn peut multiplier un texte (une chaîne de caractères) pour le répéter plusieurs fois.\nPar exemple : “a” * 10 donnera “aaaaaaaaaa”\nExemple de sortie:\nEntrer le nombre de lignes: 4\n   *\n  ***\n *****\n*******\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nSolution 1\nn = 4\nfor i in range(n):\n    print(\" \"*((n-1)-i),\"*\"*((i*2)+1))\nSolution 2\nn = 4\nfor i in range(n):\n    for _ in range((n-1)-i):\n        print(\" \",end=\"\")\n    for _ in range(i*2):\n        print(\"*\",end=\"\")\n    print(\"*\")",
+    "crumbs": [
+      "Controle"
+    ]
+  },
+  {
+    "objectID": "SITE/Premiere/IntroPython/fiche.html",
+    "href": "SITE/Premiere/IntroPython/fiche.html",
     "title": "Fiche",
     "section": "",
     "text": "declaration :\na = 0\névaluation, affectation :\na = a*4\nVariable ciblée : a\nExpression : a*4\nL’expression sera toujours évaluée en premier ; elle est très similaire aux expressions mathématiques et on peut utiliser des parenthèses pour préciser l’ordre des opérations.\nListe des opérateurs\n\n\n\nInstr.\nUtilité\nInstr.\nUtilité\n\n\n\n\n+\nAddition\n//\nDivision euclidienne\n\n\n-\nSoustraction\n%\nReste de la division euclidienne\n\n\n*\nMultiplication\n**\nPuissance\n\n\n/\nDivision\n\n\n\n\n\nTypes de variables\n\n\n\n\n\n\n\n\nType Python\nTraduction\nExemple\n\n\n\n\nint\nentier\n42\n\n\nfloat\nflottant (décimal)\n3.1416\n\n\nstr\nchaîne de caractères\n“NSI”\n\n\nbool\nbooléen (True ou False)\n\n\n\ntuple\ncouple (tuple)\n(255, 127, 0)\n\n\nlist\nliste\n[0, 1, 2, 3, 4, 5]\n\n\ndict\ndictionnaire\n{‘Homer’: 43, ‘Marge’: 41, ‘Bart’: 12, ‘Lisa’: 10, ‘Maggie’: 4}\n\n\nfunction\nfonction\nprint\n\n\n\nÉchange de variables avec une variable temporaire\ntemp = a\na = b\nb = temp",
@@ -148,8 +130,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/fiche.html#variables",
-    "href": "Premiere/IntroPython/fiche.html#variables",
+    "objectID": "SITE/Premiere/IntroPython/fiche.html#variables",
+    "href": "SITE/Premiere/IntroPython/fiche.html#variables",
     "title": "Fiche",
     "section": "",
     "text": "declaration :\na = 0\névaluation, affectation :\na = a*4\nVariable ciblée : a\nExpression : a*4\nL’expression sera toujours évaluée en premier ; elle est très similaire aux expressions mathématiques et on peut utiliser des parenthèses pour préciser l’ordre des opérations.\nListe des opérateurs\n\n\n\nInstr.\nUtilité\nInstr.\nUtilité\n\n\n\n\n+\nAddition\n//\nDivision euclidienne\n\n\n-\nSoustraction\n%\nReste de la division euclidienne\n\n\n*\nMultiplication\n**\nPuissance\n\n\n/\nDivision\n\n\n\n\n\nTypes de variables\n\n\n\n\n\n\n\n\nType Python\nTraduction\nExemple\n\n\n\n\nint\nentier\n42\n\n\nfloat\nflottant (décimal)\n3.1416\n\n\nstr\nchaîne de caractères\n“NSI”\n\n\nbool\nbooléen (True ou False)\n\n\n\ntuple\ncouple (tuple)\n(255, 127, 0)\n\n\nlist\nliste\n[0, 1, 2, 3, 4, 5]\n\n\ndict\ndictionnaire\n{‘Homer’: 43, ‘Marge’: 41, ‘Bart’: 12, ‘Lisa’: 10, ‘Maggie’: 4}\n\n\nfunction\nfonction\nprint\n\n\n\nÉchange de variables avec une variable temporaire\ntemp = a\na = b\nb = temp",
@@ -158,8 +140,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/fiche.html#condition",
-    "href": "Premiere/IntroPython/fiche.html#condition",
+    "objectID": "SITE/Premiere/IntroPython/fiche.html#condition",
+    "href": "SITE/Premiere/IntroPython/fiche.html#condition",
     "title": "Fiche",
     "section": "Condition",
     "text": "Condition\nUne condition est une expression qui se termine par True (vrai) ou False (faux).\nListe des comparaisons\n\n\n\nInstr.\nUtilité\nInstr.\nUtilité\n\n\n\n\n&gt;\nsupérieur\n&gt;=\nsupérieur ou égal\n\n\n&lt;\ninférieur\n&lt;=\ninférieur ou égal\n\n\n==\négalité\n!=\ndifférent\n\n\n\nIl existe aussi des opérateurs logiques qui s’appliquent sur des valeurs vraies ou fausses :\n\n\n\nInstr.\nUtilité\n\n\n\n\nand\nvrai si les deux opérandes sont vrais\n\n\nor\nvrai si au moins un des opérandes est vrai\n\n\n\nL’instruction conditionnelle if permet d’exécuter du code seulement si une condition est vraie.\nSyntaxe :\nif condition:\n    instruction1\n    instruction2\nOn peut ajouter un else qui s’exécute lorsque la condition est fausse :\nif condition:\n    instruction1\n    instruction2\nelse:\n    instruction3\n    instruction4\nPour tester plusieurs conditions successives on utilise elif (contraction de else + if) :\nif condition:\n    instruction1\n    instruction2\nelif condition2:\n    instruction3\nelif condition3:\n    instruction4\nelse:\n    instruction5",
@@ -168,8 +150,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/fiche.html#les-boucles-for",
-    "href": "Premiere/IntroPython/fiche.html#les-boucles-for",
+    "objectID": "SITE/Premiere/IntroPython/fiche.html#les-boucles-for",
+    "href": "SITE/Premiere/IntroPython/fiche.html#les-boucles-for",
     "title": "Fiche",
     "section": "Les boucles for",
     "text": "Les boucles for\nLes boucles for permettent de parcourir un itérable (chaîne, liste, tuple, etc.).\nExemples :\n\nLa chaîne “NSI” est itérable : on peut la décomposer en ‘N’, ‘S’, ‘I’.\nLa liste [4, 3, 17] est itérable : on peut la décomposer en 4, 3, 17.\nL’entier 5 n’est pas itérable.\n\nSyntaxe :\nfor elm in iterable:\n    instruction1\n    instruction2\nExemple :\nfor lettre in \"NSI\":\n    print(lettre)\nLa première itération affichera ‘N’,puis à la deuxième ‘S’, puis ‘I’.\n\nLa fonction range\nrange renvoie un itérable de nombres selon les paramètres donnés :\nSyntaxe :\nrange(debut, fin, pas)\nLa séquence commence à debut, avance de pas et s’arrête avant fin (fin exclue). pas vaut 1 par défaut et debut vaut 0 par défaut.\nNote : si la variable d’itération n’est pas utilisée, il est recommandé de la nommer _ :\nfor _ in range(5):\n    print(\"bonjour\")",
@@ -178,8 +160,8 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/fiche.html#la-boucle-while",
-    "href": "Premiere/IntroPython/fiche.html#la-boucle-while",
+    "objectID": "SITE/Premiere/IntroPython/fiche.html#la-boucle-while",
+    "href": "SITE/Premiere/IntroPython/fiche.html#la-boucle-while",
     "title": "Fiche",
     "section": "La boucle while",
     "text": "La boucle while\nLa boucle while exécute des instructions tant que la condition est vraie.\nSyntaxe :\nwhile condition:\n    instruction1\n    instruction2\nAttention : une erreur fréquente est d’écrire une condition qui est toujours vraie ou toujours fausse, provoquant une boucle infinie ou jamais exécutée.",
@@ -188,23 +170,13 @@
     ]
   },
   {
-    "objectID": "Premiere/IntroPython/fiche.html#fonction",
-    "href": "Premiere/IntroPython/fiche.html#fonction",
+    "objectID": "SITE/Premiere/IntroPython/fiche.html#fonction",
+    "href": "SITE/Premiere/IntroPython/fiche.html#fonction",
     "title": "Fiche",
     "section": "Fonction",
     "text": "Fonction\nUne fonction est un bloc de code réutilisable que l’on définit avant de l’utiliser.\nDéfinition :\ndef ma_fonction():\n    print(1)\n    print(2)\nUtilisation :\nprint(3)\nma_fonction()\nprint(4)\nma_fonction()\nSortie :\n3\n1\n2\n4\n1\n2\nOn peut ajouter des paramètres :\ndef ma_fonction(param1, param2):\n    print(param1)\n    print(param2)\nprint(3)\nma_fonction(5, 6)\nprint(4)\nma_fonction(2, 0)\nSortie :\n3\n5\n6\n4\n2\n0\nOn peut aussi retourner une valeur avec return. Par défaut une fonction renvoie None si rien n’est retourné.\nExemple sans return :\ndef ma_fonction(param1, param2):\n    resultat = param1 + param2\n\nprint(ma_fonction(1, 2))\nAffiche :\nNone\nAvec return :\ndef ma_fonction(param1, param2):\n    resultat = param1 + param2\n    return resultat\n\nprint(ma_fonction(1, 2))\nAffiche :\n3\nLe mot-clé return arrête l’exécution de la fonction et renvoie la valeur fournie.\nUne fonction peut accéder à une variable définie à l’extérieur (variable globale), mais le code extérieur ne peut pas accéder aux variables locales définies à l’intérieur de la fonction.",
     "crumbs": [
       "Fiche"
-    ]
-  },
-  {
-    "objectID": "Premiere/IntroPython/controleBlanc.html",
-    "href": "Premiere/IntroPython/controleBlanc.html",
-    "title": "Controle",
-    "section": "",
-    "text": "NoteConcaténation de caractères\n\n\n\nIl est possible de coller (le vrai mot est concaténer) deux chaînes de caractères par l’opérateur + :\n&gt;&gt;&gt; \"a\" + \"b\"\n'ab'\n\n\n\nExercice 1\nSur un jeu d’échecs, les cases sont repérées par une lettre (de A jusqu’à H) et par un chiffre (de 1 jusqu’à 8).\nLes cases sont donc A1, A2, A3, …, H7, H8.\nProposer un code qui écrit toutes les cases possibles.\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nfor lettre in 'ABCDEFGH':\n    for chiffre in '12345678':\n        case = lettre + chiffre\n        print(case)\n\n\n\n\n\nExercice 2\n\n\nVous disposez d’une liste de nombres [2, 5, 7, 10, 13, 18].\n\n\nÉcrivez un programme en Python qui calcule la somme de tous les nombres pairs de la liste à l’aide d’une boucle for.\n\n\nAffichez ensuite cette somme à l’écran.\n\n\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nliste_nombres = [2 , 5 , 7 , 10 , 13 , 18]\nsomme_nombres_pairs = 0\nfor nombre in liste_nombres :\n    if nombre % 2 == 0: # On vérifie si le nombre est pair\n        somme_nombres_pairs += nombre # On ajoute le nombre à la somme\n\nprint(\"La somme des nombres pairs de la liste est :\", somme_nombres_pairs )\n\n\n\n\n\nExercice 3\nÉcrire un programme en Python qui doit compter le nombre d’occurrences d’une lettre particulière dans une chaîne de caractères donnée. Par exemple, pour la chaîne de caractères “Bonjour tout le monde”, il doit être retourné la valeur 3 pour la chaîne de caractères “o”.\n\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\n# Définition de la chaîne de caractères à traiter\nchaine = \" Bonjour tout le monde \"\n# Définition de la lettre que l’on cherche\nlettre = ’o’\n# Initialisation du compteur d’ occurrences de la lettre\nnb_occurrences = 0\n# Parcours de chaque caractère de la chaîne\nfor caractere in chaine :\n    # Vérification si le caractère est égal à la lettre que l ’on cherche\n    if caractere == lettre :\n        # Si oui , on incrémente le compteur d’ occurrences\n        nb_occurrences += 1\n# Affichage du nombre d’ occurrences de la lettre\nprint(f\"La lettre ’{ lettre }’ apparaît { nb_occurrences } fois dans la chaîne ’{ chaine } ’.\")\n\n\n\n\n\nExercice 4\nÉcrire un programme qui génère toutes les paires de nombres premiers jumeaux inférieures à 1000.\nPour rappel, deux nombres premiers sont dits jumeaux si leur différence est égale à 2. Par exemple, (3, 5) est une paire de nombres premiers jumeaux car 5-3 = 2.\nDans le code, on utilisera une fonction est_premier qui prend un entier n en argument, et qui renseigne si l’entier est premier ou pas :\ndef est_premier (n) :\n    \"\"\" Fonction qui renvoie True si le nombre n est premier , False sinon \"\"\"\n    if n &lt; 2:\n        return False\n    for i in range(2 , int(n **0.5) +1) :\n        if n % i == 0:\n            return False\n    return True\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nfor n in range(2, 1000):\n    if est_premier(n) and est_premier(n + 2):\n        print(n, n + 2)\n\n\n\n\n\nExercice 5\nÉcrire un programme en Python qui affiche une Pyramide complète avec des *, en fonction d’un entier N saisi par l’utilisateur.\nSi l’on ajoute le paramètre end avec la valeur ““, la fonction print() ne revient pas à la ligne.\nExemple : print(“a”, end=““)\nOn peut multiplier un texte (une chaîne de caractères) pour le répéter plusieurs fois.\nPar exemple : “a” * 10 donnera “aaaaaaaaaa”\nExemple de sortie:\nEntrer le nombre de lignes: 4\n   *\n  ***\n *****\n*******\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nSolution 1\nn = 4\nfor i in range(n):\n    print(\" \"*((n-1)-i),\"*\"*((i*2)+1))\nSolution 2\nn = 4\nfor i in range(n):\n    for _ in range((n-1)-i):\n        print(\" \",end=\"\")\n    for _ in range(i*2):\n        print(\"*\",end=\"\")\n    print(\"*\")",
-    "crumbs": [
-      "Controle"
     ]
   }
 ]
